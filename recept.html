@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<style>
+
+.rectangle1 {
+    width: 1280px;
+    height: 500px;
+    max-width: 1280px;
+    min-height: 500px;
+    border: 1px;
+    border-color: #fcfcfc;
+}
+    
+.genrallbox {
+  display: flex;
+  flex-direction: column;  
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ffffff;
+}
+
+.outerbox {
+    justify-self: center;
+    width: 2000px;
+    height: 1900px;
+    padding: 64px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    background-color: #a10000;
+}
+
+.innerbox {
+    justify-self: center;
+    align-items: center;
+    width: 1280px;
+    height: 1336px;
+    padding-top: 48px;
+    padding-right: 48px;
+    bottom: 64px;
+    left: 48px;
+    right: 48px;
+    border: 2px solid rgb(96 139 168);
+    border-radius: 5px;
+    background-color: #fcfcfc;
+}
+
+.p1  {
+    font-family: "Open Sans";
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 28px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #a10000;
+}
+
+.p2 {
+    font-family: 'Open Sans';
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    font-weight: 400;
+    color: #000000;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.p3  {
+    font-family: "Open Sans";
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #000000;
+}
+
+.p4  {
+    font-family: "Open Sans";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #000000;
+}
+
+.paragraphbox1 {
+    width: 1154px;
+    height: 38px;
+    padding: 16px;
+    gap: 10px;
+    background-color: #cfcfcf;
+} 
+
+.paragraphbox2 {
+    width: 1184px;
+    height: 54px;
+    background-color: #ebebeb;
+} 
+
+.frame2 {
+    gap: 16px;
+    width: 1184px;
+    height: 279px;
+    background-color: #fcfcfc;
+}
+
+.frame3 {
+    gap: 16px;
+    width: 1184px;
+    height: 241px;
+    background-color: #fcfcfc;
+}
+
+</style>
+</head>
+<body>
+
+<div class="genrallbox>">
+    <p>generallbox</p>
+
+    <div class="rectangle1">
+        <img src="image1.png" alt="">
+    </div>
+
+    <div class="outerbox">
+    <p>outer box</p>
+
+    <div class="innerbox">
+        <p class="p1"> Enkelt recept på pannkakor</p>
+        <div class="paragraphbox2">
+            <p class="p2">Gör traditionella tunna pannkakor med detta enkla och goda pannkaksrecept. </p> 
+        </div>
+        <div class="frame2">
+            <p class="p3">Indrigenser</p>
+            <p class="p4">för 4 portioner</p>
+            <li class="p4">2 1/2 dl vetemjöl</li>
+            <li class="p4">1/2 tsk salt</li>
+            <li class="p4">6 dl mjölk</li>
+            <li class="p4">3 ägg</li>
+            <li class="p4">smör (till stekning)</li>
+            <li class="p4">sylt, bär eller frukt till servering</li>
+        </div>
+        <div class="frame3">
+            <p class="p3">Så här gör du</p>
+            <ol>
+            <li> Blanda mjöl och salt i en bunke.</li> 
+            <li>Vispa i hälften av mjölken och vispa till en slät smet.</li> 
+            <li>Vispa i resten av mjölken och äggen.</li>    
+            <li>Låt smeten vila ca 10 minuter.</li>
+            <li>Stek tunna pannkakor i lite smör, för varje pannkaka, i en stek- eller pannkakspanna.</li>
+            <li>Servera med sylt, bär eller frukt</li>
+            </ol>
+        </div>
+    </div>
+
+    </div>
+</div>
+
+</body>
+</html>
