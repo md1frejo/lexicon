@@ -7,13 +7,11 @@
 
 <style>    
 
-/* Make grid collapse on mobile */
 .main {
   display: grid;
   grid-template-columns: 1fr;
 }
 
-/* Container scales with screen */
 .desktop {
   display: flex;
   flex-direction: column;
@@ -23,13 +21,11 @@
   margin: 0 auto;
 }
 
-/* Header image wrapper */
 .rectangle1 {
   max-width: 100%;
   margin: 0 auto;
 }
 
-/* Main frame becomes fluid */
 .frame7 {
   width: 100%;
   box-sizing: border-box;
@@ -40,7 +36,6 @@
   margin-top: 24px;
 }
 
-/* Text styling stays mostly the same */
 .p1 {
   font-family: "Open Sans";
   font-weight: 700;
@@ -60,11 +55,8 @@
   font-size: 22px;
 }
 
-/* Frames adjust automatically */
-.frame9,
-.frame1,
-.frame2,
-.frame3 {
+
+.frame9,.frame1,.frame2,.frame3 {
   width: 100%;
   background-color: #fcfcfc;
   margin-top: 16px;
@@ -81,7 +73,6 @@
   height: auto;
 }
 
-/* Mobile responsive rules */
 @media (max-width: 768px) {
 
   .desktop {
@@ -100,15 +91,6 @@
     font-size: 22px;
   }
 }
-
-
-
-
-
-
-
-
-
 
 </style>
 </head>
@@ -148,14 +130,13 @@
             </div>
             <div class="frame1">
                 <p class="p3">Serveringsförslag</p>
-                <div class="row">
-                    <img src="bleft.png" alt=""  width="580" height="467" style="max-width:100%;height:auto;">
-                    <img src="bright.png" alt="" width="580" height="467" style="max-width:100%;height:auto;">
+                <div class="column">
+                    <img src="bleft.png" alt=""  width="100%" height="467" style="max-width:100%;height:auto;">
+                    <img src="bright.png" alt="" width="100%" height="467" style="max-width:100%;height:auto;">
                 </div>
             </div>
         </div> 
     </div>
-
 
     </div>
 </body>
