@@ -3,9 +3,8 @@
 <html lang="sv">
 <head>
 
-<title>recept på pannkakstårta</title>
-
 <meta charset="UTF-8">
+<title>Recept på pannkakstårta</title>  
 <meta name="description" content="pannkaksrecept">
 <meta name="keywords" content="HTML">
 <meta name="author" content="Jonas Fredriksson">
@@ -14,32 +13,37 @@
 </head>
 
 <body>
- <div class="main">
+<header>
+  <figure class="desktop">
+    <img src="image1.png" alt="stor pannkaka">
+  </figure>
+</header>
 
+ <main>
+  <article aria-labelledby="intro-title"></article>
     <div class="desktop">
-        <div class="rectangle1">
-            <img src="image1.png" alt="stor pannkaka" style="max-width:100%;height:auto;">
-        </div>  
-
         <div class="frame7">
-            <heading class="p1">Enkelt recept på pannkakor</heading>
-            <div class="frame9">
-                <p class="p2">Gör traditionella tunna pannkakor med detta enkla och goda pannkaksrecept. </p> 
-            </div>
-            <div class="frame2">
-                <heading class="p3">Indrigenser</heading>
-                <p class="p4">för 4 portioner</p>
-                <ul>
-                    <li class="p4">2 1/2 dl vetemjöl</li>
-                    <li class="p4">1/2 tsk salt</li>
-                    <li class="p4">6 dl mjölk</li>
-                    <li class="p4">3 ägg</li>
-                    <li class="p4">smör (till stekning)</li>
-                    <li class="p4">sylt, bär eller frukt till servering</li>
-                </ul>
-            </div>
-            <div class="frame3">
-                <heading class="p3">Så här gör du</heading>
+
+            <section aria-labelledby="main-parag">
+              <h1 class="p1" id="main-parag">Enkelt recept på pannkakor</h1>
+              <p class="p2">Gör traditionella tunna pannkakor med detta enkla och goda pannkaksrecept. </p> 
+            </section>
+
+            <section class="fram2" aria-labelledby="ingred-section"></section>
+                <h2 class="p3" id="ingred-section">Ingredienser</h2>
+                  <p class="p4">för 4 portioner</p>
+                  <ul>
+                      <li class="p4">2 1/2 dl vetemjöl</li>
+                      <li class="p4">1/2 tsk salt</li>
+                      <li class="p4">6 dl mjölk</li>
+                      <li class="p4">3 ägg</li>
+                      <li class="p4">smör (till stekning)</li>
+                      <li class="p4">sylt, bär eller frukt till servering</li>
+                  </ul>
+            </section>
+
+            <section class="frame3" aria-labelledby="inst-heading">
+                <h2 class="p3" id="inst-heading">Så här gör du</h2>
                 <ul>
                 <li> Blanda mjöl och salt i en bunke.</li> 
                 <li>Vispa i hälften av mjölken och vispa till en slät smet.</li> 
@@ -48,26 +52,20 @@
                 <li>Stek tunna pannkakor i lite smör, för varje pannkaka, i en stek- eller pannkakspanna.</li>
                 <li>Servera med sylt, bär eller frukt</li>
                 </ul>
-            </div>
-            <div class="frame1">
-                <heading class="p3">Serveringsförslag</heading>
-                <div class="column">
-                    <img src="bleft.png" alt="några pannkakor"  width="100%" height="467" style="max-width:100%;height:auto;">
-                    <img src="bright.png" alt="pannkakor på tallrik" width="100%" height="467" style="max-width:100%;height:auto;">
-                </div>
-            </div>
+            </section>
+
+            <section class="frame1" aria-labelledby="serv-heading">
+                <h2 class="p3" id="serv-heading">Serveringsförslag</h2>   
+                    <img class="column" src="bleft.png" alt="några pannkakor"  width="100%" height="467" style="max-width:100%;height:auto;">
+                    <img class="column" src="bright.png" alt="pannkakor på tallrik" width="100%" height="467" style="max-width:100%;height:auto;">
+            </section>
+
         </div> 
     </div>
-
-    </div>
+ </main>
 </body>
 
 <style>    
-
-.main {
-  display: grid;
-  grid-template-columns: 1fr;
-}
 
 .desktop {
   display: flex;
