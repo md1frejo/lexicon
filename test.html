@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <link rel="stylesheet" href="recept.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1 class="t1">html and css testing</h1>
+
+    <h2 class="clist">this is h2 with cyan from list </h2>
+
+    <h3 class="clist">h3 with some color</h3>
+
+    <h4 class="clist">h4 outside div</h4>   
+
+    <div class="clist">
+        <h4>h4 inside div</h4>   
+    </div>
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing 
+    elit. Deleniti laborum cum molestiae 
+    autem, vitae eligendi ad. Temporibus, possimus saepe quisquam dolorum dicta accusamus illum inventore, magnam, enim ex fugit facere!</p>
+
+
+    <div class="clist">
+        <h2>h2 inside div</h2>
+        <h3>h3 inside div</h3>
+    </div>
+
+</body>
+
+
+</html>
+
+<style>
+
+    .t1 {color: blue;}
+    .t2 {color: cyan}
+
+    .clist1 h2,
+    .clist1 h3,
+    .clist1 a {
+        color: brown;
+    }
+
+    .clist:is(h2,h3,h4) {
+        color: rgb(190, 8, 38);
+    }
+
+</style>
