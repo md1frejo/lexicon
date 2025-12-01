@@ -1,0 +1,14 @@
+    .t1 {color: blue;}
+    .t2 {color: cyan}
+    .t3 {color: rgb(216, 20, 190)}
+
+    .clist1 h2,
+    .clist1 h3,
+    .clist1 a {
+        color: brown;
+    }
+
+    .clist:is(h2,h3,h4) {
+        color: rgb(190, 8, 38);
+    }
+
