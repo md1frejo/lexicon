@@ -1,0 +1,82 @@
+.nav {
+    background-color: white;
+    border-bottom: 1rem; /* why not px? */
+    border-color: #e5e7eb; 
+}
+
+.main {
+    background: linear-gradient(0.25turn,rgb(37, 99, 235, 1),rgba(30, 64, 175, 1));
+    display: flex;
+    flex-direction: column;   
+    justify-content: center; /* horizontal */
+    align-items: center;     /* vertical */
+    min-height: 20vh;       /* full screen height */
+}
+
+.header {
+
+}
+
+.inter-h1 {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: 2rem;
+  font-weight: 700;
+  font-style: bold;
+  color: #ffffff;
+  text-align: center;
+  line-height: 2rem;
+  letter-spacing: 0%;
+  align-items: center;
+}
+
+.inter-h2 {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: 2rem;
+  font-weight: 400;
+  font-style: regular;
+  color: #dbeafe;
+  text-align: center;
+  line-height: 1rem;
+  letter-spacing: 0%;
+  align-items: center;
+}
+
+.form-text {
+  font-family: "Inter", sans-serif;
+/*  font-optical-sizing: 2px; */
+  font-weight: 400;
+  font-style: normal;
+  color: #000000;
+  text-align: center;
+  line-height: 1rem;
+  align-items: center;
+}
+￼
+.inp {
+    width: 448px;
+    margin: 0 auto; 
+}
+
+
+content_copy
+Copy code
+
+.div_main {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto auto; 
+    gap: 10px;
+}
+
+.col1 {
+    grid-column: 1;
+}
+
+.col2 {
+    grid-column: 2;
+}
+
+
+.p1 {
+    color: aquamarine;
+}

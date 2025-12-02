@@ -1,18 +1,81 @@
-<!DOCTYPE html>
+<!doctype html>
+<html lang="en">
 
-<html lang="sv">
 <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TechBlog — Featured</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+</head>
 
-<title>recept på pannkakstårta</title>
+<body>
+    <header class="container header-inner">
+        <a class="brand" href="/">TechBlog</a>
+        <nav aria-label="Primary" class="main-nav">
+            <ul role="list">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/categories">Categories</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="/subscribe" class="btn btn-primary">Subscribe</a>
+    </header>
+    <main class="container layout">
+        <header aria-labelledby="heading-1" class="hero">
+            <div class="container hero-inner">
+                <h1 id="heading-1">Welcome to TechBlog</h1>
+                <p class="lead">Discover the latest insights in web development, design, and
+                    technology</p>
+                <search>
+                    <form class="search">
+                        <label for="article_search">
+                            <span class="sr-only">Search articles</span>
+                        </label>
+                        <input id="article_search" placeholder="Search articles..." />
+                    </form>
+                </search>
+            </div>
+        </header>
+        <section class="flow">
+            <header class="section-head">
+                <h2>Featured articles</h2>
+                <p class="muted">Latest insights and tutorials from our expert writers</p>
+            </header>
+            <article aria-labelledby="article-heading-1" class="card">
+                <img src="https://www.figma.com/api/mcp/asset/a5104b48-336f-4657-9c3a-bc3fd2c352a4"
+                    alt="Article image" />
+                <div class="card-body">
+                    <header>
+                        <div class="meta-row">
+                            <span class="badge text-sm text-semibold blue">Web Development</span>
+                            <time class="muted">January 15, 2024</time>
+                        </div>
+                        <h3 id="article-heading-1" class="card-title">Modern CSS Grid techniques for responsive design
+                        </h3>
+                    </header>
 
-<meta charset="UTF-8">
-<meta name="description" content="techblog">
-<meta name="keywords" content="HTML">
-<meta name="author" content="Jonas Fredriksson">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <p class="muted">Learn how to create flexible and responsive layouts using the latest CSS Grid
+                        features. This
+                        comprehensive guide covers everything from basic grid concepts to advanced techniques.</p>
 
-<header>
-
-
-
-</header>
+                    <a href="/" class="pb-2" aria-label="Read more about modern css grid">Read more...</a>
+                    <footer class="card-footer">
+                        <div class="author">
+                            <img class="avatar"
+                                src="https://www.figma.com/api/mcp/asset/0953e1d4-e3c1-4e54-b241-c965352e2a52" alt="" />
+                            <div>
+                                <a href="mailto:john@ll.se" class="text-semibold">John Smith</a>
+                                <div class="text-sm muted">Senior Developer</div>
+                            </div>
+                        </div>
+                        <div class="text-sm muted">8 min read</div>
+                    </footer>
+                </div>
+            </article>
+            <article class="card">
+                <img src="https://www.figma.com/api/mcp/asset/8886908e-3141-42ef-bda9-658c5dfa422c"
+                    alt="Article
