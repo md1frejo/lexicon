@@ -84,6 +84,7 @@
 }
 
 .art1_text2_footer {
+    display: flex;
     width: 752;
     height: 40;
     top: 168px;
@@ -95,19 +96,21 @@
     font-family: Inter;
     font-weight: 500;
     font-size: 14px;
-    line-height: 20px;
     letter-spacing: 0%;
     padding-left: 2rem;
     color: #111827;
 }
 
+.author-info {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
 .art1_occupation_footer {
     font-family: Inter;
     font-weight: 400;
-    font-style: Regular;
     font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 0%;
     padding-left: 2rem;
     color: #6B7280;
 }
