@@ -149,12 +149,13 @@
     flex-direction: column;   
     justify-content: center; 
     align-items: center;     
-    min-height: 20vh;      
+    min-height: 20vh;    
+    height: 15rem;  
 }
 
 .section_right_1 {
 
-    width: 384px;
+    width: 95%;
     height: 244px;
     opacity: 1;
     border-radius: 8px;
@@ -186,7 +187,7 @@
 
 .section_right_2 {
     
-    width: 384px;
+    width: 95%;
     height: 236px;
     top: 268px;
     opacity: 1;
@@ -205,7 +206,7 @@
 .section2_right_2_button {
     display: block;
     border-radius: 6px;
-    width: 336px;
+    width: 95%;
     height: 40px;
     margin: 0 auto;
     background-color: #ffffff;  
@@ -233,6 +234,7 @@
 }
 
 .section_right_3 {
+    width: 95%;
     background-color: #ffffff;
 }
 
@@ -253,8 +255,9 @@
     margin-bottom: 1rem;   /* spacing between rows */
 }
 
-.header {
-
+.post-info article {
+    margin: 0;         
+    line-height: 1.4;  
 }
 
 .inter-h1 {
