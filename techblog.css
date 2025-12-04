@@ -35,6 +35,17 @@
     width: 75%;
 }
 
+.header_top_text {
+    margin-left: 2rem;
+    color: #111827;
+    font-family: Inter;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: 0%;
+}
+
 .section_top {
     background: linear-gradient(0.25turn,rgb(37, 99, 235, 1),rgba(30, 64, 175, 1));
     display: flex;
@@ -71,12 +82,14 @@
 }
 
 .p_section_2 {
+    margin-left: 2rem;
     font-family: Inter;
     font-weight: 600;
     font-style: Semi Bold;
     font-size: 18px;
     line-height: 100%;
     letter-spacing: 0%;
+    color: #ffffff;
 }
 
 
