@@ -134,12 +134,31 @@
 
 .grid-footer {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem; 
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 1.5rem;
+    padding: 2rem;
 }
 
 .footer {
     background-color: #111827;
-    height: 100px;
 }
 
+.heading-footer {
+    font-family: Inter;
+    font-weight: 600;
+    font-style: Semi Bold;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0%;
+    color: #ffffff;
+}
+
+.text-footer {
+font-family: Inter;
+font-weight: 400;
+font-style: Regular;
+font-size: 14px;
+line-height: 100%;
+letter-spacing: 0%;
+color: #ffffff;
+}
