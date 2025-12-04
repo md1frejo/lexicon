@@ -110,6 +110,9 @@
 
 .art1_text2_footer {
     display: flex;
+    align-items: center;
+    gap: 1rem; 
+    margin-top: 1rem;
     width: 752;
     height: 40;
     top: 168px;
@@ -241,6 +244,13 @@
     font-size: 18px;
     line-height: 100%;
     letter-spacing: 0%;
+}
+
+.post-info {
+    display: flex;
+    align-items: center;   /* vertically center img + text */
+    gap: 0.75rem;          /* space between img and text */
+    margin-bottom: 1rem;   /* spacing between rows */
 }
 
 .header {
