@@ -40,7 +40,6 @@
     color: #111827;
     font-family: Inter;
     font-weight: 700;
-    font-style: Bold;
     font-size: 30px;
     line-height: 36px;
     letter-spacing: 0%;
@@ -50,7 +49,6 @@
     margin-left: 2rem;
     font-family: Inter;
     font-weight: 400;
-    font-style: Regular;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0%;
@@ -69,7 +67,6 @@
     margin-left: 2rem;
     font-family: Inter;
     font-weight: 500;
-    font-style: Medium;
     font-size: 14px;
     line-height: 100%;
     text-align: center;
@@ -79,7 +76,7 @@
 
 .time1 {
     width: 113.890625;
-    height: 20;
+    height: 20;Latest insights and turorials from our expert writers
     top: 4px;
     left: 162.5px;
     opacity: 1;
@@ -87,9 +84,14 @@
 
 .art1_text1 {
     width: 752;
-    height: 28;
-    top: 40px;
-    opacity: 1;
+    height: 28;   margin-left: 2rem;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+}
+
     font-family: Inter;
     font-weight: 700;
     font-size: 20px;
@@ -226,7 +228,6 @@
     margin-left: 2rem;
     font-family: Inter;
     font-weight: 400;
-    font-style: Regular;
     font-size: 14px;
     line-height: 100%;
     letter-spacing: 0%;
@@ -250,9 +251,9 @@
 
 .post-info {
     display: flex;
-    align-items: center;   /* vertically center img + text */
-    gap: 0.75rem;          /* space between img and text */
-    margin-bottom: 1rem;   /* spacing between rows */
+    align-items: center;   
+    gap: 0.75rem;          
+    margin-bottom: 1rem;   
 }
 
 .post-info article {
@@ -264,7 +265,6 @@
   font-family: "Inter", sans-serif;
   font-optical-sizing: 2rem;
   font-weight: 700;
-  font-style: bold;
   color: #ffffff;
   text-align: center;
   line-height: 2rem;
@@ -276,7 +276,6 @@
   font-family: "Inter", sans-serif;
   font-optical-sizing: 2rem;
   font-weight: 400;
-  font-style: regular;
   color: #dbeafe;
   text-align: center;
   line-height: 1rem;
@@ -347,17 +346,15 @@
 .heading-footer {
     font-family: Inter;
     font-weight: 600;
-    font-style: Semi Bold;
     font-size: 18px;
     line-height: 28px;
-    letter-spacing: 0%;
+    letter-spacing: 0%;section_right_3_text
     color: #ffffff;
 }
 
 .text-footer {
 font-family: Inter;
 font-weight: 400;
-font-style: Regular;
 font-size: 14px;
 line-height: 100%;
 letter-spacing: 0%;
