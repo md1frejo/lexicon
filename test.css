@@ -12,3 +12,19 @@
         color: rgb(190, 8, 38);
     }
 
+    .parent {
+        display: flex;
+        min-height: 300px;
+        gap: 1rem;
+    }
+
+    .child:nth-child(3) {
+        background-color: aqua;
+        height: 600px;
+    }
+
+    .pa {
+        background-color: blue;
+    }
+
+
