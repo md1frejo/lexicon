@@ -14,7 +14,7 @@
 
     .parent {
         display: flex;
-        min-height: 300px;
+        min-height: 100px;
         gap: 1rem;
     }
 
@@ -23,6 +23,40 @@
         height: 600px;
     }
 
+    .pa:nth-child(6) {
+        background-color: red;
+        height: 600px;
+    }
+
     .pa {
         background-color: blue;
+    }
+
+    .even_columns {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(4,1fr);
+    }
+
+    .flow {
+        background-color: brown;
+    }
+
+    .flow:nth-child(1) {
+        background-color: lightblue;
+    }
+    
+    /* box mode */
+
+    .box {
+        background-color: lightblue;
+    }
+
+    .inline {
+        background-color: blueviolet;
+    }
+
+    .hed1 {
+        background-color: blanchedalmond;
+        
     }
