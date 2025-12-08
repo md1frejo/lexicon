@@ -1,0 +1,97 @@
+/* css for receot with box layout */
+
+.desktop {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  background-color: #c2817a;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.rectangle1 {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.frame7 {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 24px;
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: #fcfcfc;
+  margin-top: 24px;
+}
+
+.p1 {
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-size: 26px;
+  color: #a10000;
+}
+
+.p2, .p4 {
+  font-family: "Open Sans";
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.p3 {
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.frame9,.frame1,.frame2,.frame3 {
+  width: 100%;
+  background-color: #fcfcfc;
+  margin-top: 16px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.row img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+
+  .desktop {
+    padding: 16px;
+  }
+
+  .frame7 {
+    padding: 16px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .p1 {
+    font-size: 22px;
+  }
+}
+
+.nav2 {
+    display: flex;
+    justify-self: center;
+    background-color: aqua;
+    justify-content: center;
+    width: 75%;
+}
+    
+nav {
+  display: flex;
+  background-color: burlywood;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  margin: 0 auto;
+}
