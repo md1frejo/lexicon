@@ -91,7 +91,13 @@ nav {
   display: flex;
   background-color: burlywood;
   justify-content: space-between;
+  align-content: center;
   align-items: center;
   width: 70%;
   margin: 0 auto;
+}
+
+nav img {
+    height: 60px;
+    width: auto;
 }
