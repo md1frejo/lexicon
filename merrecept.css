@@ -30,20 +30,13 @@
     max-height: auto;
 }
 
-.card {
-    display: grid;
-    gri;
-    border: 1px solid #999999;
-    border-radius: 3px;
-}
-
 .cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
 }
 
-.grid {
+.card {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, auto);
@@ -65,11 +58,17 @@
 
 .right {
   grid-area: right;
-  background-color: blueviolet;
+  background-color: aqua;
+}
+
+.right ul {
+    margin: 0;
+    padding-left: 1rem;
 }
 
 .bottom {
   grid-area: bottom;
+  background-color: beige;
 }
 
 .grid > div {
