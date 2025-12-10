@@ -1,3 +1,9 @@
+:root {
+  --h: 195;
+  --s: 53%;
+  --l: 79%;
+  --g: 10%;
+}
 
 
 .skip-link {
@@ -12,6 +18,17 @@
 
 .skip-link:focus {
   top: 0;
+}
+
+.lilex-<uniquifier> {
+  font-family: "Lilex", monospace;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+h2,p {
+  font-family: lilex;
 }
 
 .content {
@@ -46,6 +63,8 @@
 .top {
   border-top: 1rem;
   border-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   grid-area: top;
   display: flex;
   justify-content: center;
@@ -58,7 +77,7 @@
 
 .right {
   grid-area: right;
-  background-color: rgb(182, 169, 143);
+  background-color: hsl(var(--h), var(--s), calc(var(--l) + var(--g)));
 }
 
 .right ul {
@@ -71,10 +90,9 @@
     padding-left: 2rem;
 }
 
-
 .bottom {
   grid-area: bottom;
-  background-color: beige;
+  background-color: lightgray;
 }
 
 .grid > div {
