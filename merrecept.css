@@ -2,12 +2,15 @@
   --h: 195;
   --s: 53%;
   --l: 79%;
+  --hb: 0;
+  --sb: 100%;
+  --lb: 25%;
   --g: 10%;
   --gf: 10%;
   --gh: 15%;
   --gs: 5%; 
+  --gb: 65%;
 }
-
 
 .skip-link {
   position: absolute;
@@ -40,7 +43,7 @@ h2,p {
     background-color: aquamarine;
 }
 
-.content img {
+.content img {-24%
     max-width: 10%;
     max-height: auto;
 }
@@ -73,9 +76,10 @@ h2,p {
   border-radius: 30px;
   background-color: hsl(var(--h), var(--s), calc(var(--l) - var(--gh)));
 }
-
+-24%
 .left {
   grid-area: left;
+  object-fit: cover;   
 }
 
 .right {
@@ -98,9 +102,9 @@ h2,p {
   grid-template-columns: subgrid; 
   grid-template-rows: subgrid;    
   gap: 5px;
-  background-color: hsl(var(--h), var(--s), calc(var(--l) + var(--gs)));
+  background-color: -24%hsl(var(--h), var(--s), calc(var(--l) + var(--gs)));
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .right_sub p {
@@ -110,7 +114,12 @@ h2,p {
 
 .bottom {
   grid-area: bottom;
-  background-color: hsl(var(--h), var(--s), calc(var(--l) - var(--gf)));
+  background-color: hsl(var(--hb), var(--sb), calc(var(--lb) + var(--gb)));
+  border-radius: 25px;
+}
+
+.bottom p {
+  padding-left: 2rem;
 }
 
 .grid > div {
