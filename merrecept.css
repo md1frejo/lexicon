@@ -43,7 +43,7 @@ h2,p {
     background-color: aquamarine;
 }
 
-.content img {-24%
+.content img {
     max-width: 10%;
     max-height: auto;
 }
@@ -76,7 +76,7 @@ h2,p {
   border-radius: 30px;
   background-color: hsl(var(--h), var(--s), calc(var(--l) - var(--gh)));
 }
--24%
+
 .left {
   grid-area: left;
   object-fit: cover;   
