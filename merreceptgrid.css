@@ -101,7 +101,7 @@
   background-color: #fcfcfc;
   margin-top: 24px;
 }
-
+å
 .p1 {
   font-family: "Open Sans";
   font-weight: 700;
@@ -170,7 +170,7 @@ nav {
   background-color: burlywood;
   justify-content: space-between;
   align-content: center;
-  align-items: center;
+  align-items: center; /* remove */
   width: 70%;
   margin: 0 auto;
 }
