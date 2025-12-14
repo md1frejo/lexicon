@@ -6,11 +6,39 @@
   margin: 0;
 }
 
+@layer layout {
+    .span-all {
+        grid-column: 1/-1;
+    }
+}
+
+@layer form {
 
 .contact {
-    background-color: rgb(148, 179, 236);
+    background-color: rgb(215 237 255);
     padding: 2rem;
     border-radius: 1rem;
     max-inline-size: 700px;
     margin-inline: auto;
+    gap: 1rem;
+}
+
+form {
+    display: grid;
+
+    @media  (width > 500px) {
+        grid-template-columns: repeat(2,1fr);    
+    }
+}
+
+.form-group {
+    display: grid;
+}
+
+input {
+    font-size: 0.5rem;
+    border: 1px solid green;
+    border-radius: 6px;
+    padding: 0.75em 1.5em;
+}
 }
