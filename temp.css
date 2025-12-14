@@ -1,0 +1,16 @@
+/* mini reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+
+.contact {
+    background-color: rgb(148, 179, 236);
+    padding: 2rem;
+    border-radius: 1rem;
+    max-inline-size: 700px;
+    margin-inline: auto;
+}
