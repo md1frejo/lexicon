@@ -8,8 +8,9 @@
     <meta name="keywords" content="HTML">
     <meta name="author" content="Jonas Fredriksson">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="merreceptforms.css     " />
-    
+    <link rel="stylesheet" href="merreceptforms.css" />
+    <link rel="stylesheet" href="forms.css" />
+
 <body>
 
 <header>
@@ -25,10 +26,59 @@
     <img src="farmors_pannkakor.png" alt="logo">   
     <a href="merrecept.html">Recept</a>
     <a href="#">Om oss</a>
-    <a href="#">Kontakt</a>
+    <a href="#" id="receptToggle">ge ett recept</a>
+    <a href="#" id="contactToggle">Kontakt</a>
     <button class="logga_in">logga in</button>
-   </nav>
+    
+        <main class="contact" id="contact">
+         <h1>Contact us</h1>
+         <form>
+            <div class="form-group">
+                <label for="fname">First name</label>
+                <input type="text" name="first_name" id="fname" required>
+            </div>
 
+            <div class="form-group">
+                <label for="lname">Last name</label>
+                <input type="text" name="last_name" id="lname" required>
+            </div>
+
+            <div class="form-group span-all">
+                <label for="email">email</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+
+            <fieldset>
+                <legend>Query Type</legend>
+                <div class="form-group">
+                    <input type="radio" id="general" name="Query" value="genelar enquire" required>
+                    <label for="general">general Enquire</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="radio" id="support" name="Query" value="support request" required>
+                    <label for="support">support request</label>
+                </div>
+            </fieldset>
+
+            <div class="form-group span-all">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <div class="form-group">
+                    <input type="checkbox" name="consent" id="consemt">
+                    <label for="consemt">I consemt to being constacted</label>
+            </div>
+
+            <button>submitt</button>
+
+         </form>
+
+    </main>
+
+        </select>
+   </nav>
 
     <div class="cards">
 
@@ -66,7 +116,14 @@
             <a href="merrecept.html#ryska">
                 <img class="left" src="ryskapannkakor.png" alt="ryska pannkakor">
             </a>
-            <section>
+            <section>.contact {
+  display: none;
+}
+
+.contact.open {
+  display: block;
+}
+
             <p class="panntext1">ryska pannkakor</p>
             <p class="panntext2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                 Autem in veniam vel delectus perferendis</p>
@@ -98,5 +155,20 @@
 
  <main id="main">
   </main>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById("contactToggle");
+    const contact = document.getElementById("contact");
+
+    if (!toggle || !contact) return;
+
+    toggle.addEventListener("click", e => {
+      e.preventDefault();
+      contact.classList.toggle("open");
+    });
+  });
+</script>
+
 </body>
 </html>
