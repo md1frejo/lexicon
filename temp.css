@@ -16,11 +16,15 @@
 
 .contact {
     background-color: rgb(215 237 255);
-    padding: 2rem;
+    padding: 4rem;
     border-radius: 1rem;
     max-inline-size: 700px;
     margin-inline: auto;
     gap: 1rem;
+
+    @media (width < 200px) {
+        padding: 1rem;
+    }
 }
 
 form {
@@ -33,6 +37,16 @@ form {
 
 .form-group {
     display: grid;
+}
+
+.form-group:has(:not([type="radio"])[required]) label {
+    display: flex;
+    gap: 1ch;
+
+    &::after {
+        content: "*";
+        color: green;
+    }
 }
 
 input {
