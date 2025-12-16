@@ -57,6 +57,7 @@ input {
   align-items: center;
   justify-content: center;
   width: min-content;
+  height: fit-content;
 }
 
 .contact form { 
@@ -64,7 +65,7 @@ input {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto repeat(4, auto) auto;
     gap: 1rem;
-    background: white;
+    background: rgb(221, 212, 212);
     padding: 2rem;
     border-radius: 2rem;
     max-width: 500px;
