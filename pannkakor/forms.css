@@ -6,23 +6,21 @@
   margin: 0;
 }
 
-@layer layout {
-    .span-all {
-        grid-column: 1/-1;
-    }
-}
-
-
-form {
-    display: grid;
-
-    @media  (width > 500px) {
-        grid-template-columns: repeat(2,1fr);    
-    }
+.span-all {
+    grid-column: 1/-1;
 }
 
 .form-group {
     display: grid;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+.grow {
+    grid-column:  1/-1;
 }
 
 .form-group:has(:not([type="radio"])[required]) label {
@@ -66,11 +64,12 @@ input {
     grid-template-rows: auto repeat(4, auto) auto;
     gap: 1rem;
     padding: 2rem;
+    border-radius: 2rem;
     max-width: 500px;
     width: 100%;
 
     box-shadow:
-    0 20px 20px rgba(0,0,0,0.1),
+    0 2px 4px rgba(0,0,0,0.1),
     0 10px 25px rgba(0,0,0,0.15);
     border-radius: 8px;
     background: rgb(221, 212, 212);
