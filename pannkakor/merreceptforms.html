@@ -31,7 +31,7 @@
     <a href="#" id="contactToggle">Kontakt</a>
     <button class="logga_in">logga in</button>
     
-        <card class="contact" id="contact">
+    <card class="contact" id="contact">
          <form>
             <div class="full">
                 <h1>kontakta oss</h1>
@@ -82,7 +82,7 @@
 
     </card>
 
-        <card class="gerecept" id="gerecept">
+        <card class="contact" id="gerecept">
          <h1>ge recept</h1>
          <form>
             <div class="form-group">
@@ -177,10 +177,6 @@
   display: none;
 }
 
-.contact.open {
-  display: block;
-}
-
             <p class="panntext1">ryska pannkakor</p>
             <p class="panntext2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                 Autem in veniam vel delectus perferendis</p>
@@ -225,14 +221,14 @@
   });
 
   document.addEventListener("DOMContentLoaded", () => {
-    const toggle = document.getElementById("gereceptToggle");
-    const gerecept = document.getElementById("gerecept");
+    const toggle2 = document.getElementById("gereceptToggle");
+    const gerecept2 = document.getElementById("gerecept");
 
-    if (!toggle || !gerecept) return;
+    if (!toggle2 || !gerecept2) return;
 
-    toggle.addEventListener("click", e => {
+    toggle2.addEventListener("click", e => {
       e.preventDefault();
-      contact.classList.toggle("open");
+      gerecept2.classList.toggle("open");
     });
   });
 
