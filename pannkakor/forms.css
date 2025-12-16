@@ -71,7 +71,55 @@ input {
   justify-content: center;
 }
 
-.contact form {
+.contact form { 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto repeat(4, auto) auto;
+    gap: 1rem;
+    background: white;
+    padding: 2rem;
+    border-radius: 2rem;
+    max-width: 500px;
+    width: 100%;
+}
+
+.gerecept {
+  position: fixed;          
+  inset: 0;                 
+  background: rgba(0,0,0,0.5); 
+  display: none;
+  z-index: 1000;            
+}
+
+.gerecept.open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gerecept form {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.omoss {
+  position: fixed;          
+  inset: 0;                 
+  background: rgba(0,0,0,0.5); 
+  display: none;
+  z-index: 1000;            
+}
+
+.omoss.open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.omoss form {
   background: white;
   padding: 2rem;
   border-radius: 8px;

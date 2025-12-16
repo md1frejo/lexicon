@@ -25,14 +25,14 @@
    <nav class="nav">
     <img src="farmors_pannkakor.png" alt="logo">   
     <a href="merrecept.html">Recept</a>
-    <a href="#">Om oss</a>
-    <a href="#" id="receptToggle">ge ett recept</a>
+    <a href="#" id="omossToggle">om oss</a>
+    <a href="#" id="gereceptToggle">ge ett recept</a>
     <a href="#" id="contactToggle">Kontakt</a>
     <button class="logga_in">logga in</button>
     
-        <main class="contact" id="contact">
-         <h1>Contact us</h1>
+        <card class="contact" id="contact">
          <form>
+            <h1>kontakta oss</h1>
             <div class="form-group">
                 <label for="fname">First name</label>
                 <input type="text" name="first_name" id="fname" required>
@@ -75,7 +75,58 @@
 
          </form>
 
-    </main>
+    </card>
+
+        <card class="gerecept" id="gerecept">
+         <h1>ge recept</h1>
+         <form>
+            <div class="form-group">
+                <label for="fname">inrigenser</label>
+                <input type="text" name="first_name" id="fname" required>
+            </div>
+
+            <fieldset>
+                <legend>Query Type</legend>
+                <div class="form-group">
+                    <input type="radio" id="general" name="Query" value="genelar enquire" required>
+                    <label for="general">general Enquire</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="radio" id="support" name="Query" value="support request" required>
+                    <label for="support">support request</label>
+                </div>
+            </fieldset>
+
+            <div class="form-group span-all">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <button>submitt</button>
+
+         </form>
+
+    </card>
+
+    <card class="omoss" id="omoss">
+         <h1>om oss</h1>
+         <form>
+            <div class="form-group">
+                <label for="fname">inrigenser</label>
+                <input type="text" name="first_name" id="fname" required>
+            </div>
+
+            <div class="form-group span-all">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <button>submitt</button>
+
+         </form>
+
+    </card>
 
         </select>
    </nav>
@@ -116,6 +167,7 @@
             <a href="merrecept.html#ryska">
                 <img class="left" src="ryskapannkakor.png" alt="ryska pannkakor">
             </a>
+
             <section>.contact {
   display: none;
 }
@@ -153,10 +205,8 @@
 
 </header>
 
- <main id="main">
-  </main>
-
   <script>
+
   document.addEventListener("DOMContentLoaded", () => {
     const toggle = document.getElementById("contactToggle");
     const contact = document.getElementById("contact");
@@ -168,6 +218,32 @@
       contact.classList.toggle("open");
     });
   });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById("gereceptToggle");
+    const gerecept = document.getElementById("gerecept");
+
+    if (!toggle || !gerecept) return;
+
+    toggle.addEventListener("click", e => {
+      e.preventDefault();
+      contact.classList.toggle("open");
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById("omossToggle");
+    const omoss = document.getElementById("omoss");
+
+    if (!toggle || !omoss) return;
+
+    toggle.addEventListener("click", e => {
+      e.preventDefault();
+      contact.classList.toggle("open");
+    });
+  });
+
+
 </script>
 
 </body>
