@@ -123,6 +123,52 @@
 	</dialog>
 
 	<dialog id="recept">
+
+  <ul class="form-list">
+    <li>
+      <label for="title">Recipe name</label>
+      <input type="text" id="title" name="title" required>
+    </li>
+
+    <li>
+      <label for="servings">Servings</label>
+      <input type="number" id="servings" name="servings" min="1">
+    </li>
+
+    <li>
+      <label for="type">Pancake type</label>
+      <select id="type" name="type">
+        <option value="">Choose…</option>
+        <option value="sweet">Sweet</option>
+        <option value="savory">Savory</option>
+        <option value="vegan">Vegan</option>
+        <option value="glutenfree">Gluten-free</option>
+      </select>
+    </li>
+
+    <li>
+      <label for="ingredients">Ingredients (one per line)</label>
+      <textarea id="ingredients" name="ingredients" rows="6" required></textarea>
+    </li>
+
+    <li>
+      <label for="instructions">Instructions</label>
+      <textarea id="instructions" name="instructions" rows="6" required></textarea>
+    </li>
+
+    <li>
+      <label for="time">Cooking time (minutes)</label>
+      <input type="number" id="time" name="time" min="1">
+    </li>
+
+    <li>
+      <label for="image">Recipe image</label>
+      <input type="file" id="image" name="image" accept="image/*">
+    </li>
+  </ul>
+
+
+
           <form action="#" method="POST" class="">
           <label for="recept">recept</label>
           <textarea id="comments" name="comments" rows="20"></textarea>
