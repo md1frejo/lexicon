@@ -28,7 +28,7 @@
 	<a href="merrecept.html">Recept</a>
 	<a href="#" id="omossToggle">om oss</a>
 	<a href="#" id="gereceptToggle">ge ett recept</a>
-	<a href="#" id="contactToggle">Support</a>
+	<a href="#" id="supportToggle">Support</a>
 	<button class="logga_in">logga in</button>
 
 	<button onclick="document.getElementById('recension').showModal()" class="">
@@ -39,11 +39,11 @@
           kontakt
 	</button> 
 
-	<button onclick="document.getElementById('recension').showModal()" class="">
+	<button onclick="document.getElementById('recept').showModal()" class="">
           ge ett recept
 	</button> 
 
-	<card class="contact" id="support">
+	<card class="support" id="support">
           <form>
             <div class="full">
               <h1>kontakta oss</h1>
@@ -97,14 +97,37 @@
           <form action="#" method="POST" class="">
             <div class="">
               <label for="fnamn">Förnamn</label>
+              <input type="fnamn" name="fnamn" id="fnamn"
+                   autocomplete="fnam" placeholder="förnamn" required/>
             </div>
-            <input type="enamn" name="enamn" id="enamn"
-                   autocomplete="email" placeholder="svensson" required/>
+            <div class="">
+              <label for="enamn">Efternamn</label>
+              <input type="enamn" name="enamn" id="enamn"
+                   autocomplete="enam" placeholder="Efternamn" required/>
             </div>
+            <div class="">
+              <label for="tel">mobilnummer</label>
+              <input type="tel" name="mobile" id="mobile"
+                   autocomplete="mobile" placeholder="mobilnummer" required/>
+            </div>
+
+            <div class="">
+                <label for="guest-email">Epost</label>
+            </div>
+                <input type="email" name="email" id="guest-email"
+                     autocomplete="email" placeholder="epost@epost.se"/>
+          </div>
             <button type="button" class="" onclick="document.getElementById('kontakt').close()"
                     aria-label="Stäng">x</button>
           </form>
+	</dialog>
 
+	<dialog id="recept">
+          <form action="#" method="POST" class="">
+          <label for="recept">recept</label>
+          <textarea id="comments" name="comments" rows="20"></textarea>
+          <button type="submit" class="">Skicka receptet</button>
+          </form>
 	</dialog>
 
 	<dialog id="recension">
@@ -160,8 +183,7 @@
             </form>
         </dialog>
 
-
-        <card class="contact" id="gerecept">
+        <card class="support" id="gerecept">
           <h1>ge recept</h1>
           <form>
             <div class="form-group">
@@ -254,10 +276,9 @@
             <img class="left" src="ryskapannkakor.png" alt="ryska pannkakor">
           </a>
 
-          <section>.contact {
+          <section>.support {
 	    display: none;
 	    }
-
             <p class="panntext1">ryska pannkakor</p>
             <p class="panntext2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
               Autem in veniam vel delectus perferendis</p>
@@ -290,7 +311,7 @@
     <script>
 
      document.addEventListener("DOMContentLoaded", () => {
-       const toggle = document.getElementById("contactToggle");
+       const toggle = document.getElementById("supportToggle");
        const support = document.getElementById("support");
 
        if (!toggle || !support) return;
@@ -321,7 +342,7 @@
 
        toggle.addEventListener("click", e => {
 	 e.preventDefault();
-	 contact.classList.toggle("open");
+	 support.classList.toggle("open");
        });
      });
 

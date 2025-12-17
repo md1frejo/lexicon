@@ -1,1 +1,2 @@
-this is for testing different things related to html,css,js,react,etc
+pannkakor is a dir for the pannkakor exercise
+temp is a dir with tempory files
