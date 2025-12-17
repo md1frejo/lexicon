@@ -28,13 +28,22 @@
     <a href="merrecept.html">Recept</a>
     <a href="#" id="omossToggle">om oss</a>
     <a href="#" id="gereceptToggle">ge ett recept</a>
-    <a href="#" id="contactToggle">Kontakt</a>
+    <a href="#" id="contactToggle">Support</a>
     <button class="logga_in">logga in</button>
+
     <button onclick="document.getElementById('recension').showModal()" class="">
         vad tycker du?
     </button> 
-    
-    <card class="contact" id="contact">
+
+    <button onclick="document.getElementById('kontakt').showModal()" class="">
+        kontakt
+    </button> 
+
+    <button onclick="document.getElementById('recension').showModal()" class="">
+        ge ett recept
+    </button> 
+
+    <card class="contact" id="support">
          <form>
             <div class="full">
                 <h1>kontakta oss</h1>
@@ -83,6 +92,20 @@
          </form>
 
     </card>
+
+    <dialog id="kontakt">
+        <form action="#" method="POST" class="">
+            <div class="">
+                <label for="fnamn">Förnamn</label>
+            </div>
+                <input type="enamn" name="enamn" id="enamn"
+                        autocomplete="email" placeholder="svensson" required/>
+            </div>
+            <button type="button" class="" onclick="document.getElementById('kontakt').close()"
+                    aria-label="Stäng">x</button>
+        </form>
+
+    </dialog>
 
     <dialog id="recension">
         <div>
@@ -268,13 +291,13 @@
 
   document.addEventListener("DOMContentLoaded", () => {
     const toggle = document.getElementById("contactToggle");
-    const contact = document.getElementById("contact");
+    const support = document.getElementById("support");
 
-    if (!toggle || !contact) return;
+    if (!toggle || !support) return;
 
     toggle.addEventListener("click", e => {
       e.preventDefault();
-      contact.classList.toggle("open");
+      support.classList.toggle("open");
     });
   });
 
