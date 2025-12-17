@@ -101,7 +101,7 @@ input {
   width: 100%;
 }
 
-.omoss {
+.ommig {
   position: fixed;          
   inset: 0;                 
   background: rgba(0,0,0,0.5); 
@@ -109,16 +109,62 @@ input {
   z-index: 1000;            
 }
 
-.omoss.open {
+.ommig.open {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.omoss form {
-  background: white;
-  padding: 2rem;
-  border-radius: 8px;
-  max-width: 500px;
-  width: 100%;
+.ommig {
+  grid-column: 1 auto;
+  flex-direction: column;
+  background-color: aliceblue;
+  max-width: fit-content  ;
+  max-height: fit-content;
+}
+
+.ommig img {
+  width: 50%;
+  height: auto;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.grid--1-row {
+  grid-template-rows: repeat(1, 1fr);
+}
+
+.grid--2-rows {
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.grid--3-rows {
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.grid--1-col {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+dialog {
+  border: none;
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: min(90vw, 500px);
+  box-shadow: 0 15px 40px rgba(0,0,0,.3);
+}
+
+dialog::backdrop {
+  background: rgba(0,0,0,.5);
 }

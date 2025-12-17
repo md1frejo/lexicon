@@ -26,10 +26,9 @@
       <nav class="nav">
 	<img src="farmors_pannkakor.png" alt="logo">   
 	<a href="merrecept.html">Recept</a>
-	<a href="#" id="omossToggle">om oss</a>
+	<a href="#" id="ommigToggle">om mig</a>
 	<a href="#" id="gereceptToggle">ge ett recept</a>
 	<a href="#" id="supportToggle">Support</a>
-	<button class="logga_in">logga in</button>
 
 	<button onclick="document.getElementById('recension').showModal()" class="">
           vad tycker du?
@@ -46,7 +45,7 @@
 	<card class="support" id="support">
           <form>
             <div class="full">
-              <h1>kontakta oss</h1>
+              <h1>support</h1>
             </div>
             <div class="form-group">
               <label for="fname">Förnamn</label>
@@ -86,9 +85,7 @@
                 <label for="consemt">I consemt to being constacted</label>
               </div>
             </div>
-
             <button>submitt</button>
-
           </form>
 
 	</card>
@@ -167,16 +164,77 @@
     </li>
   </ul>
 
-
-
-          <form action="#" method="POST" class="">
+      <form action="#" method="POST" class="">
           <label for="recept">recept</label>
           <textarea id="comments" name="comments" rows="20"></textarea>
-          <button type="submit" class="">Skicka receptet</button>
-          </form>
+      <button type="submit" class="">Skicka receptet</button>
+      </form>
 	</dialog>
 
-	<dialog id="recension">
+<dialog id="recension">
+  <div class="grid grid--1-col">
+
+    <div class="grid grid--2-cols">
+      <h1>vad tycker du?</h1>
+      <button
+        type="button"
+        onclick="document.getElementById('recension').close()"
+        aria-label="Stäng"
+        style="justify-self:end"
+      >x</button>
+    </div>
+
+    <form class="grid grid--1-col" action="#" method="POST">
+
+      <div>
+        <label for="guest-email">Epost</label>
+      </div>
+      <input
+        type="email"
+        name="email"
+        id="guest-email"
+        autocomplete="email"
+        placeholder="epost@epost.se"
+      />
+
+      <label for="pannkaka">vilken pannkaka valde du?</label>
+      <select id="pannkaka" name="pannkaka">
+        <option>tjockpannkaka</option>
+        <option>japanskapannkakor</option>
+        <option>koreanskapannkakor</option>
+        <option>ryskapannkakor</option>
+        <option>amerikanskapannkakor</option>
+        <option>franskapannkakor</option>
+      </select>
+
+      <label for="rating">Rekommendera pannkakorna (0–10)</label>
+      <input
+        type="range"
+        id="rating"
+        name="rating"
+        min="0"
+        max="10"
+        step="1"
+        list="rating-markers"
+      />
+
+      <fieldset class="grid grid--1-col">
+        <legend>Hur hittade du hemsidan?</legend>
+        <label><input type="checkbox"> Google</label>
+        <label><input type="checkbox"> Sociala medier</label>
+        <label><input type="checkbox"> Vänner</label>
+      </fieldset>
+
+      <label for="comments">något att tilläga?</label>
+      <textarea id="comments" rows="4"></textarea>
+
+      <button type="submit">Skicka recension</button>
+
+    </form>
+  </div>
+</dialog>
+
+	<dialog id="recension2">
           <div>
             <div>
               <h1>vad tycker du?</h1>
@@ -263,26 +321,19 @@
 
 	</card>
 
-	<card class="omoss" id="omoss">
-          <h1>om oss</h1>
-          <form>
-            <div class="form-group">
-              <label for="fname">inrigenser</label>
-              <input type="text" name="first_name" id="fname" required>
-            </div>
-
-            <div class="form-group span-all">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" required></textarea>
-            </div>
-
-            <button>submitt</button>
-
-          </form>
-
+	<card class="ommig" id="ommig">
+          <h1>om mig</h1>
+          <p>Jag heter Farmor Pannkaka</p>
+          <p>och i hela mitt liv har jag </p>
+          <p>gräddat pannkakor. På denna sida </p>
+          <p>finns det 6 recept av 1000.</p>
+          <p>hoppas att det smakar gott</p>
+          <img class="left" src="farmorpannkaka.png" alt="farmor pannkaka">
+          <button type="button" class="" onclick="document.getElementById('ommig').close()"
+                    aria-label="Stäng">x</button>
 	</card>
 
-          </select>
+  </select>
       </nav>
 
       <div class="cards">
@@ -381,14 +432,14 @@
      });
 
      document.addEventListener("DOMContentLoaded", () => {
-       const toggle = document.getElementById("omossToggle");
-       const omoss = document.getElementById("omoss");
+       const toggle = document.getElementById("ommigToggle");
+       const ommig = document.getElementById("ommig");
 
-       if (!toggle || !omoss) return;
+       if (!toggle || !ommig) return;
 
        toggle.addEventListener("click", e => {
 	 e.preventDefault();
-	 support.classList.toggle("open");
+	  ommig.classList.toggle("open");
        });
      });
 
@@ -397,7 +448,3 @@
 
   </body>
 </html>
-
-
-
-
