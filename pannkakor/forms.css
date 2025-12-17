@@ -1,0 +1,125 @@
+/* mini reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.span-all {
+    grid-column: 1/-1;
+}
+
+.form-group {
+    display: grid;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+.grow {
+    grid-column:  1/-1;
+}
+
+.form-group:has(:not([type="radio"])[required]) label {
+    display: flex;
+    gap: 1ch;
+
+    &::after {
+        content: "*";
+        color: green;
+    }
+}
+
+input {
+    font-size: 0.5rem;
+    border: 1px solid green;
+    border-radius: 6px;
+    padding: 0.75em 1.5em;
+}
+
+
+.contact {
+  position: fixed;          
+  inset: 0;                 
+  background: rgba(0,0,0,0.5); 
+  display: none;
+  z-index: 1000;            
+}
+
+.contact.open {
+  display: flex;
+  border-radius: 25%;
+  align-items: center;
+  justify-content: center;
+  width: min-content;
+  height: fit-content;
+}
+
+.contact form { 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto repeat(4, auto) auto;
+    gap: 1rem;
+    padding: 2rem;
+    border-radius: 2rem;
+    max-width: 500px;
+    width: 100%;
+
+    box-shadow:
+    0 2px 4px rgba(0,0,0,0.1),
+    0 10px 25px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    background: rgb(221, 212, 212);
+}
+
+.full {
+    grid-column: 1/-1;
+}    
+
+
+.gerecept {
+  position: fixed;          
+  inset: 0;                 
+  background: rgba(0,0,0,0.5); 
+  display: none;
+  z-index: 1000;            
+}
+
+.gerecept.open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gerecept form {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.omoss {
+  position: fixed;          
+  inset: 0;                 
+  background: rgba(0,0,0,0.5); 
+  display: none;
+  z-index: 1000;            
+}
+
+.omoss.open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.omoss form {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+}

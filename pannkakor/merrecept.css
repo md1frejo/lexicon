@@ -1,0 +1,117 @@
+:root {
+  --h: 195;
+  --s: 53%;
+  --l: 79%;
+  --hb: 0;
+  --sb: 100%;
+  --lb: 25%;
+  --g: 10%;
+  --gf: 10%;
+  --gh: 15%;
+  --gs: 5%; 
+  --gb: 65%;
+}
+
+.lilex-<uniquifier> {
+  font-family: "Lilex", monospace;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+h2,p {
+  font-family: lilex;
+}
+
+.content {
+    display: grid;
+    grid-template-rows: 4fr 4fr 4fr 4fr;
+    background-color: aquamarine;
+}
+
+.content img {
+    max-width: 10%;
+    max-height: auto;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto minmax(200px, 1fr) auto;
+    grid-template-areas:
+    "top top"
+    "left right"
+    "bottom bottom";
+    gap: 1rem;
+}
+
+.top {
+  border-top: 1rem;
+  border-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  grid-area: top;
+  display: flex;
+  justify-content: center;
+  border-radius: 30px;
+  background-color: hsl(var(--h), var(--s), calc(var(--l) - var(--gh)));
+}
+
+.left {
+  grid-area: left;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  
+}
+
+.right {
+  grid-area: right;
+  background-color: hsl(var(--h), var(--s), calc(var(--l) + var(--g)));
+}
+
+.right ul {
+    margin: 0;
+    padding-left: 2rem;
+}
+
+.right p {
+    margin: 0;
+    padding-left: 2rem;
+}
+
+.right_sub {
+  display: grid;
+  grid-template-columns: subgrid; 
+  grid-template-rows: subgrid;    
+  gap: 5px;
+  background-color: -24%hsl(var(--h), var(--s), calc(var(--l) + var(--gs)));
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.right_sub p {
+  background-color: hsl(var(--h), var(--s), calc(var(--l) - var(--gs)));
+  border-radius: 20px;
+}
+
+.bottom {
+  grid-area: bottom;
+  background-color: hsl(var(--hb), var(--sb), calc(var(--lb) + var(--gb)));
+  border-radius: 25px;
+}
+
+.bottom p {
+  padding-left: 2rem;
+}
+
+.grid > div {
+  padding: 1rem;
+  background: #eee;
+  border: 1px solid #ccc;
+}
