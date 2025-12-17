@@ -208,15 +208,7 @@
       </select>
 
       <label for="rating">Rekommendera pannkakorna (0–10)</label>
-      <input
-        type="range"
-        id="rating"
-        name="rating"
-        min="0"
-        max="10"
-        step="1"
-        list="rating-markers"
-      />
+      <input type="range" id="rating" name="rating" min="0" max="10" step="1" list="rating-markers"/>
 
       <fieldset class="grid grid--1-col">
         <legend>Hur hittade du hemsidan?</legend>
@@ -233,59 +225,6 @@
     </form>
   </div>
 </dialog>
-
-	<dialog id="recension2">
-          <div>
-            <div>
-              <h1>vad tycker du?</h1>
-              <button type="button" class=""
-                      onclick="document.getElementById('recension').close()"
-                      aria-label="Stäng">x</button>
-            </div>
-            <form action="#" method="POST" class="">
-              <div class="">
-                <label for="guest-email">Epost</label>
-              </div>
-              <input type="email" name="email" id="guest-email"
-                     autocomplete="email" placeholder="epost@epost.se"/>
-          </div>
-          <label for="guests">vilken pannkaka valde du?</label>
-          <select id="pannkaka" name="pannkaka">
-            <option value="1">tjockpannkaka</option>
-            <option value="2">japanskapannkakor</option>
-            <option value="3">koreanskapannkakor</option>
-            <option value="4">ryskapannkakor</option>
-            <option value="5">amrikanskapannkakor</option>
-            <option value="2">franskapannkakor</option>
-          </select>
-          <label for="rating">Rekommendera pannkakorna (0-10)</label>
-          <input type="range" id="rating" name="rating"
-                 min="0" max="10" step="1" list="rating-markers"/>
-          <datalist id="rating-markers">
-            <option value="0"></option>
-            <option value="5"></option>
-            <option value="10"></option>
-          </datalist>
-          <fieldset class="">
-            <legend>Hur hittade du hemsidan?</legend>
-            <label>
-              <input type="checkbox" name="source" value="social" />
-              google
-            </label>
-            <label>
-              <input type="checkbox" name="source" value="google" />
-              fb,insta,tiktok?
-            </label>
-            <label>
-              <input type="checkbox" name="source" value="friends" />
-              Vänner
-            </label>
-          </fieldset>
-          <label for="comments">något att tilläga?</label>
-          <textarea id="comments" name="comments" rows="4"></textarea>
-          <button type="submit" class="">Skicka recension</button>
-            </form>
-        </dialog>
 
         <card class="support" id="gerecept">
           <h1>ge recept</h1>
