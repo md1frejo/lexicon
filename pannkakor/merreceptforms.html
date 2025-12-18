@@ -89,34 +89,32 @@
 	</card>
 
 	<dialog id="kontakt">
-          <form action="#" method="POST" class="">
-            <div class="grid grid--1-col">
+          <form action="#" method="POST" class="grid grid--1-cols">
             <div>
               <label for="fnamn">Förnamn</label>
               <input type="fnamn" name="fnamn" id="fnamn"
                    autocomplete="fnam" placeholder="förnamn" required/>
             </div>
-            <div class="">
+
+            <div>
               <label for="enamn">Efternamn</label>
               <input type="enamn" name="enamn" id="enamn"
                    autocomplete="enam" placeholder="Efternamn" required/>
             </div>
           
-            <div class="">
+            <div>
               <label for="tel">mobilnummer</label>
               <input type="tel" name="mobile" id="mobile"
                    autocomplete="mobile" placeholder="mobilnummer" required/>
             </div>
 
-            <div class="">
+            <div>
                 <label for="guest-email">Epost</label>
             </div>
                 <input type="email" name="email" id="guest-email"
                      autocomplete="email" placeholder="epost@epost.se"/>
-          </div>
             <button type="button" class="" onclick="document.getElementById('kontakt').close()"
                     aria-label="Stäng">x</button>
-          </div>
           </form>
 	</dialog>
 

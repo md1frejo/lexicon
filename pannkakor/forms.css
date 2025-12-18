@@ -161,7 +161,9 @@ dialog {
   border: none;
   border-radius: 10px;
   padding: 1.5rem;
-  width: min(90vw, 500px);
+  /* width: min(90vw, 500px); */
+  width: fit-content;
+  max-width: 90vw;
   box-shadow: 0 15px 40px rgba(0,0,0,.3);
 }
 
