@@ -80,8 +80,6 @@
 
               <div class="full>
 			  <input type="checkbox" name="consent" id="consemt">
-                
-                
                 <label for="consemt">I consemt to being constacted</label>
               </div>
             </div>
@@ -92,7 +90,8 @@
 
 	<dialog id="kontakt">
           <form action="#" method="POST" class="">
-            <div class="">
+            <div class="grid grid--1-col">
+            <div>
               <label for="fnamn">Förnamn</label>
               <input type="fnamn" name="fnamn" id="fnamn"
                    autocomplete="fnam" placeholder="förnamn" required/>
@@ -102,6 +101,7 @@
               <input type="enamn" name="enamn" id="enamn"
                    autocomplete="enam" placeholder="Efternamn" required/>
             </div>
+          
             <div class="">
               <label for="tel">mobilnummer</label>
               <input type="tel" name="mobile" id="mobile"
@@ -116,6 +116,7 @@
           </div>
             <button type="button" class="" onclick="document.getElementById('kontakt').close()"
                     aria-label="Stäng">x</button>
+          </div>
           </form>
 	</dialog>
 
@@ -173,7 +174,6 @@
 
 <dialog id="recension">
   <div class="grid grid--1-col">
-
     <div class="grid grid--2-cols">
       <h1>vad tycker du?</h1>
       <button
