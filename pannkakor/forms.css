@@ -51,6 +51,7 @@ input {
 
 .support.open {
   display: flex;
+  flex-direction: column;
   border-radius: 25%;
   align-items: center;
   justify-content: center;
