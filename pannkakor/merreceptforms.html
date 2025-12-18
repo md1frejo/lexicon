@@ -83,7 +83,7 @@
                 <label for="consemt">I consemt to being constacted</label>
               </div>
             </div>
-            <button>submitt</button>
+            <button class="closeb">submit</button>
           </form>
 
 	</card>
@@ -170,9 +170,9 @@
       <label for="recept">recept</label>
       <textarea class="textarea" id="comments" name="comments" rows="20"></textarea>
       <div class="grid grid--2-cols">
-        <button type="button" class="closeb" onclick="document.getElementById('recept').close()"
+        <button id="r1" type="button" class="closeb" onclick="document.getElementById('recept').close()"
                     aria-label="Stäng">x</button>
-        <button type="submit" class="closeb">Skicka receptet</button>
+        <button id="r1" type="submit" class="closeb">Skicka receptet</button>
       </div>
     </form>
       
@@ -226,7 +226,7 @@
       <label for="comments">något att tilläga?</label>
       <textarea id="comments" rows="4"></textarea>
 
-      <button type="submit">Skicka recension</button>
+      <button type="submit" class="closeb">Skicka recension</button>
 
     </form>
   </div>
@@ -260,7 +260,7 @@
               <textarea id="message" name="message" required></textarea>
             </div>
 
-            <button>submitt</button>
+            <button id="r1">submit</button>
 
           </form>
 
@@ -274,7 +274,7 @@
           <p>finns det 6 recept av 1000.</p>
           <p>hoppas att det smakar gott</p>
           <img class="left" src="farmorpannkaka.png" alt="farmor pannkaka">
-          <button type="button" class="" onclick="document.getElementById('ommig').close()"
+          <button type="button" class="closeb" onclick="document.getElementById('ommig').close()"
                     aria-label="Stäng">x</button>
 	</card>
 
