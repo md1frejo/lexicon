@@ -35,7 +35,7 @@ fieldset {
 
 input {
     width: -webkit-fill-available;
-    font-size: 0.85rem;
+    font-size: clamp(0.5rem, 0.85vw, 1rem);
     border: 1px solid green;
     border-radius: 6px;
     padding: 0.75em 1.5em;
