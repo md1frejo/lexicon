@@ -43,7 +43,7 @@ fieldset {
 }
 
 .dropdownh1 {
-  font-size: 2rem;
+  font-size: 1rem;
   background-color: aliceblue;
 }
 
@@ -144,6 +144,8 @@ input {
   height: auto;
 }
 
+/* grid utility setup */
+
 .grid {
   display: grid;
   gap: 1rem;
@@ -189,6 +191,10 @@ dialog::backdrop {
 
 .textarea {
   width: -webkit-fill-available;
+}
+
+.alist {
+  font-size: clamp(1rem, 6vw, 2rem);
 }
 
 .closeb {
