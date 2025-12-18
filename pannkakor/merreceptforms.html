@@ -90,6 +90,7 @@
 
 	<dialog id="kontakt">
           <form action="#" method="POST" class="grid grid--1-cols">
+            <h2>Fyll i så kontaktar farmor pannkaka dig</h2>
             <div>
               <label for="fnamn">Förnamn</label>
               <input type="fnamn" name="fnamn" id="fnamn"
@@ -113,7 +114,7 @@
             </div>
                 <input type="email" name="email" id="guest-email"
                      autocomplete="email" placeholder="epost@epost.se"/>
-            <button type="button" class="" onclick="document.getElementById('kontakt').close()"
+            <button type="button" class="closeb" onclick="document.getElementById('kontakt').close()"
                     aria-label="Stäng">x</button>
           </form>
 	</dialog>
@@ -129,8 +130,8 @@
           </li>
 
           <li>
-            <label for="servings">Servings</label>
-            <input type="number" id="servings" name="servings" min="1">
+            <label for="portioner">Servings</label>
+            <input type="number" id="portioner" name="portioner" min="1">
           </li>
 
   
@@ -141,35 +142,38 @@
               <option value="sweet">Söta</option>
               <option value="savory">Beska</option>
               <option value="vegan">Vegan</option>
-              <option value="glutenfree">Gluten-fria</option>
+              <option value="glutenfri">Glutenfri</option>
             </select>
           </li>
 
           <li>
-            <label for="ingredients">Ingredients (one per line)</label>
+            <label for="ingredients">ingridienser (en för varje rad)</label>
             <textarea class="textarea" id="ingredients" name="ingredients" rows="6" required></textarea>
           </li>
 
           <li>
-            <label for="instructions">Instructions</label>
-            <textarea id="instructions" name="instructions" rows="6" required></textarea>
+            <label for="instructions">tillagning</label>
+            <textarea class="textarea" id="tillagning" name="tillagning" rows="6" required></textarea>
           </li>
 
           <li>
-            <label for="time">Cooking time (minutes)</label>
+            <label for="time">tid att tillaga (minuter)</label>
             <input type="number" id="time" name="time" min="1">
           </li>
 
           <li>
-            <label for="image">Recipe image</label>
+            <label for="image">bild på recept</label>
             <input type="file" id="image" name="image" accept="image/*">
           </li>
     </ul>
 
       <label for="recept">recept</label>
       <textarea class="textarea" id="comments" name="comments" rows="20"></textarea>
-      <button type="submit" class="">Skicka receptet</button>
-
+      <div class="grid grid--2-cols">
+        <button type="button" class="closeb" onclick="document.getElementById('recept').close()"
+                    aria-label="Stäng">x</button>
+        <button type="submit" class="closeb">Skicka receptet</button>
+      </div>
     </form>
       
 	</dialog>

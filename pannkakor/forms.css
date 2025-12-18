@@ -173,5 +173,10 @@ dialog::backdrop {
 }
 
 .textarea {
-  width: auto;
+  width: -webkit-fill-available;
+}
+
+.closeb {
+  width: 20%;
+  background-color: rgb(211, 171, 171);
 }
