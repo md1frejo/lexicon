@@ -26,19 +26,22 @@
       <nav class="nav">
 	<img src="farmors_pannkakor.png" alt="logo">   
 	<a href="merrecept.html">Recept</a>
-	<a href="#" id="ommigToggle">om mig</a>
 	<a href="#" id="gereceptToggle">ge ett recept</a>
 	<a href="#" id="supportToggle">Support</a>
 
-	<button onclick="document.getElementById('recension').showModal()" class="">
+  <a href="#">sök</a>
+
+  <a href="#" class=fa id="ommigToggle" role="button">lite om farmor</a>
+
+	<button onclick="document.getElementById('recension').showModal()" class="bt">
           vad tycker du?
 	</button> 
 
-	<button onclick="document.getElementById('kontakt').showModal()" class="">
+	<button onclick="document.getElementById('kontakt').showModal()" class="bt">
           kontakt
 	</button> 
 
-	<button onclick="document.getElementById('recept').showModal()" class="">
+	<button onclick="document.getElementById('recept').showModal()" class="bt">
           ge ett recept
 	</button> 
 
@@ -83,12 +86,12 @@
                 <label for="consemt">I consemt to being constacted</label>
               </div>
             </div>
-            <button class="closeb">submit</button>
+            <button class="closeb2">submit</button>
           </form>
 
 	</card>
 
-	<dialog id="kontakt">
+	<dialog class="dialog" id="kontakt">
           <form action="#" method="POST" class="grid grid--1-cols">
             <h2>Fyll i så kontaktar farmor pannkaka dig</h2>
             <div>
@@ -170,9 +173,9 @@
       <label for="recept">recept</label>
       <textarea class="textarea" id="comments" name="comments" rows="20"></textarea>
       <div class="grid grid--2-cols">
-        <button id="r1" type="button" class="closeb" onclick="document.getElementById('recept').close()"
+        <button type="button" class="closeb2" onclick="document.getElementById('recept').close()"
                     aria-label="Stäng">x</button>
-        <button id="r1" type="submit" class="closeb">Skicka receptet</button>
+        <button type="submit" class="closeb2">Skicka receptet</button>
       </div>
     </form>
       
@@ -260,20 +263,20 @@
               <textarea id="message" name="message" required></textarea>
             </div>
 
-            <button id="r1">submit</button>
+            <button class="closeb">submit</button>
 
           </form>
 
 	</card>
 
 	<card class="ommig" id="ommig">
-          <h1>om mig</h1>
-          <p>Jag heter Farmor Pannkaka</p>
-          <p>och i hela mitt liv har jag </p>
-          <p>gräddat pannkakor. På denna sida </p>
-          <p>finns det 6 recept av 1000.</p>
+          <h1>Farmor Pannkaka</h1>
+          <br>
+          <p>Jag heter Farmor Pannkaka och i hela mitt liv har jag </p>
+          <p>gräddat pannkakor. På denna sida finns det 6 recept av 1000.</p>
           <p>hoppas att det smakar gott</p>
           <img class="left" src="farmorpannkaka.png" alt="farmor pannkaka">
+          <br>
           <button type="button" class="closeb" onclick="document.getElementById('ommig').close()"
                     aria-label="Stäng">x</button>
 	</card>
