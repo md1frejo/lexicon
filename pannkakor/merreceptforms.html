@@ -48,7 +48,7 @@
 	      <card class="support" id="support">
           <form>
             <div class="full">
-              <h1>support</h1>
+              <h1>om du har problem</h1>
             </div>
             <div class="form-group">
               <label for="fname">Förnamn</label>
@@ -77,9 +77,8 @@
             <div class="full">
               <div class="form-group span-all">
                 <label for="message">medelande</label>
-                <textarea id="message" name="message" required></textarea>
+                <textarea id="message" name="message"</textarea>
               </div>
-
             </div>
             <button class="closeb2">submit</button>
           </form>
@@ -227,36 +226,16 @@
 </dialog>
 
         <card class="support" id="gerecept">
-          <h1>ge recept</h1>
-          <form>
-            <div class="form-group">
-              <label for="fname">inrigenser</label>
-              <input type="text" name="first_name" id="fname" required>
-            </div>
+          <h1 class="dropdownh1">välj ett recept i listan</h1>
 
-            <fieldset>
-              <legend>Query Type</legend>
-              <div class="full">
-                <input type="radio" id="general" name="Query" value="genelar enquire" required>
-                <label for="general">general Enquire</label>
-              </div>
-
-              <div class="full">
-                <input type="radio" id="support" name="Query" value="support request" required>
-              </div>
-              <div class="full">
-                <label for="support">support request</label>
-              </div>
-            </fieldset>
-
-            <div class="form-group span-all">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" value="det godaste jag någonsin har ätit" required></textarea>
-            </div>
-
-            <button class="closeb">submit</button>
-
-          </form>
+          <nav class="dropdown">
+          <ul class="dropdown-menu" id="receptMenu">
+            <li><a href="#tjockpannkaka">Tjockpannkaka</a></li>
+            <li><a href="#japanska">Japanska pannkakor</a></li>
+            <li><a href="#koreanska">Koreanska pannkakor</a></li>
+            <li><a href="#ryska">Ryska pannkakor</a></li>
+          </ul>
+          </nav>
 
 	</card>
 
@@ -312,8 +291,8 @@
             <img class="left" src="ryskapannkakor.png" alt="ryska pannkakor">
           </a>
 
-          <section>.support {
-	    display: none;
+      <section>.support {
+	        display: none;
 	    }
             <p class="panntext1">ryska pannkakor</p>
             <p class="panntext2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. 

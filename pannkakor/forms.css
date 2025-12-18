@@ -33,6 +33,20 @@ fieldset {
     }
 }
 
+.dropdown {
+  background-color: antiquewhite;
+  size: 4rem;
+}
+
+.dropdown-menu {
+  background-color:azure;
+}
+
+.dropdownh1 {
+  font-size: 2rem;
+  background-color: aliceblue;
+}
+
 input {
     width: -webkit-fill-available;
     font-size: clamp(0.5rem, 0.85vw, 1rem);
@@ -66,7 +80,7 @@ input {
     gap: 1rem;
     padding: 2rem;
     border-radius: 2rem;
-    max-width: 500px;
+    max-width: clamp(300px 700px 500px)
     width: 100%;
 
     box-shadow:
