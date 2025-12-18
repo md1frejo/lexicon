@@ -34,6 +34,7 @@ fieldset {
 }
 
 input {
+    width: -webkit-fill-available;
     font-size: 0.5rem;
     border: 1px solid green;
     border-radius: 6px;
@@ -169,4 +170,8 @@ dialog {
 
 dialog::backdrop {
   background: rgba(0,0,0,.5);
+}
+
+.textarea {
+  width: auto;
 }
