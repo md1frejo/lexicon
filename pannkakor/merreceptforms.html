@@ -24,28 +24,28 @@
       <a href="#franska" class="skip-link"></a>
 
       <nav class="nav">
-	<img src="farmors_pannkakor.png" alt="logo">   
-	<a href="merrecept.html">Recept</a>
-	<a href="#" id="gereceptToggle">ge ett recept</a>
-	<a href="#" id="supportToggle">Support</a>
+	      <img src="farmors_pannkakor.png" alt="logo">   
+	      <a href="merrecept.html">Recept</a>
+	      <a href="#" id="gereceptToggle">välj ett recept</a>
+	      <a href="#" id="supportToggle">Support</a>
 
-  <a href="#">sök</a>
+        <a href="#">sök</a>
 
-  <a href="#" class=fa id="ommigToggle" role="button">lite om farmor</a>
+        <a href="#" class=fa id="ommigToggle" role="button">lite om farmor</a>
 
-	<button onclick="document.getElementById('recension').showModal()" class="bt">
+	      <button onclick="document.getElementById('recension').showModal()" class="bt">
           vad tycker du?
-	</button> 
+	      </button> 
 
-	<button onclick="document.getElementById('kontakt').showModal()" class="bt">
-          kontakt
-	</button> 
+	      <button onclick="document.getElementById('kontakt').showModal()" class="bt">
+            kontakt
+	      </button> 
 
-	<button onclick="document.getElementById('recept').showModal()" class="bt">
-          ge ett recept
-	</button> 
+	      <button onclick="document.getElementById('recept').showModal()" class="bt">
+            ge ett recept
+	      </button> 
 
-	<card class="support" id="support">
+	      <card class="support" id="support">
           <form>
             <div class="full">
               <h1>support</h1>
@@ -82,16 +82,16 @@
               
 
               <div class="full>
-			  <input type="checkbox" name="consent" id="consemt">
+			          <input type="checkbox" name="consent" id="consemt">
                 <label for="consemt">I consemt to being constacted</label>
               </div>
             </div>
             <button class="closeb2">submit</button>
           </form>
 
-	</card>
+	      </card>
 
-	<dialog class="dialog" id="kontakt">
+	      <dialog class="dialog" id="kontakt">
           <form action="#" method="POST" class="grid grid--1-cols">
             <h2>Fyll i så kontaktar farmor pannkaka dig</h2>
             <div>
@@ -199,13 +199,8 @@
       <div>
         <label for="guest-email">Epost</label>
       </div>
-      <input
-        type="email"
-        name="email"
-        id="guest-email"
-        autocomplete="email"
-        placeholder="epost@epost.se"
-      />
+      <input type="email" name="email" id="gemail" autocomplete="email"
+        placeholder="epost@epost.se" required />
 
       <label for="pannkaka">vilken pannkaka valde du?</label>
       <select id="pannkaka" name="pannkaka">
@@ -218,7 +213,7 @@
       </select>
 
       <label for="rating">Rekommendera pannkakorna (0–10)</label>
-      <input type="range" id="rating" name="rating" min="0" max="10" step="1" list="rating-markers"/>
+      <input type="range" id="rating" name="rating" min="0" max="10" step="1" list="rating-markers" required/>
 
       <fieldset class="grid grid--1-col">
         <legend>Hur hittade du hemsidan?</legend>
@@ -228,7 +223,7 @@
       </fieldset>
 
       <label for="comments">något att tilläga?</label>
-      <textarea id="comments" rows="4"></textarea>
+      <textarea id="comments" rows="4" required></textarea>
 
       <button type="submit" class="closeb">Skicka recension</button>
 
