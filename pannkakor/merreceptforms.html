@@ -24,6 +24,7 @@
       <a href="#franska" class="skip-link"></a>
 
       <nav class="nav">
+<<<<<<< HEAD
 	      <img src="farmors_pannkakor.png" alt="logo">   
 	      <a href="merrecept.html">Recept</a>
 	      <a href="#" id="gereceptToggle">välj ett recept</a>
@@ -49,6 +50,31 @@
           <form>
             <div class="full">
               <h1>om du har problem med pannkakorna</h1>
+=======
+	<img src="farmors_pannkakor.png" alt="logo">   
+	<a href="merrecept.html">Recept</a>
+	<a href="#" id="omossToggle">om oss</a>
+	<a href="#" id="gereceptToggle">ge ett recept</a>
+	<a href="#" id="contactToggle">Support</a>
+	<button class="logga_in">logga in</button>
+
+	<button onclick="document.getElementById('recension').showModal()" class="">
+          vad tycker du?
+	</button> 
+
+	<button onclick="document.getElementById('kontakt').showModal()" class="">
+          kontakt
+	</button> 
+
+	<button onclick="document.getElementById('recension').showModal()" class="">
+          ge ett recept
+	</button> 
+
+	<card class="contact" id="support">
+          <form>
+            <div class="full">
+              <h1>kontakta oss</h1>
+>>>>>>> misc
             </div>
             <div class="form-group">
               <label for="fname">Förnamn</label>
@@ -76,6 +102,7 @@
 
             <div class="full">
               <div class="form-group span-all">
+<<<<<<< HEAD
                 <label for="message">medelande</label>
                 <textarea id="message" name="message" required></textarea>
               </div>
@@ -253,6 +280,149 @@
 	</card>
 
   </select>
+=======
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+              </div>
+              
+
+              <div class="full>
+			  <input type="checkbox" name="consent" id="consemt">
+                
+                
+                <label for="consemt">I consemt to being constacted</label>
+              </div>
+            </div>
+
+            <button>submitt</button>
+
+          </form>
+
+	</card>
+
+	<dialog id="kontakt">
+          <form action="#" method="POST" class="">
+            <div class="">
+              <label for="fnamn">Förnamn</label>
+            </div>
+            <input type="enamn" name="enamn" id="enamn"
+                   autocomplete="email" placeholder="svensson" required/>
+            </div>
+            <button type="button" class="" onclick="document.getElementById('kontakt').close()"
+                    aria-label="Stäng">x</button>
+          </form>
+
+	</dialog>
+
+	<dialog id="recension">
+          <div>
+            <div>
+              <h1>vad tycker du?</h1>
+              <button type="button" class=""
+                      onclick="document.getElementById('recension').close()"
+                      aria-label="Stäng">x</button>
+            </div>
+            <form action="#" method="POST" class="">
+              <div class="">
+                <label for="guest-email">Epost</label>
+              </div>
+              <input type="email" name="email" id="guest-email"
+                     autocomplete="email" placeholder="epost@epost.se"/>
+          </div>
+          <label for="guests">vilken pannkaka valde du?</label>
+          <select id="pannkaka" name="pannkaka">
+            <option value="1">tjockpannkaka</option>
+            <option value="2">japanskapannkakor</option>
+            <option value="3">koreanskapannkakor</option>
+            <option value="4">ryskapannkakor</option>
+            <option value="5">amrikanskapannkakor</option>
+            <option value="2">franskapannkakor</option>
+          </select>
+          <label for="rating">Rekommendera pannkakorna (0-10)</label>
+          <input type="range" id="rating" name="rating"
+                 min="0" max="10" step="1" list="rating-markers"/>
+          <datalist id="rating-markers">
+            <option value="0"></option>
+            <option value="5"></option>
+            <option value="10"></option>
+          </datalist>
+          <fieldset class="">
+            <legend>Hur hittade du hemsidan?</legend>
+            <label>
+              <input type="checkbox" name="source" value="social" />
+              google
+            </label>
+            <label>
+              <input type="checkbox" name="source" value="google" />
+              fb,insta,tiktok?
+            </label>
+            <label>
+              <input type="checkbox" name="source" value="friends" />
+              Vänner
+            </label>
+          </fieldset>
+          <label for="comments">något att tilläga?</label>
+          <textarea id="comments" name="comments" rows="4"></textarea>
+          <button type="submit" class="">Skicka recension</button>
+            </form>
+        </dialog>
+
+
+        <card class="contact" id="gerecept">
+          <h1>ge recept</h1>
+          <form>
+            <div class="form-group">
+              <label for="fname">inrigenser</label>
+              <input type="text" name="first_name" id="fname" required>
+            </div>
+
+            <fieldset>
+              <legend>Query Type</legend>
+              <div class="full">
+                <input type="radio" id="general" name="Query" value="genelar enquire" required>
+                <label for="general">general Enquire</label>
+              </div>
+
+              <div class="full">
+                <input type="radio" id="support" name="Query" value="support request" required>
+              </div>
+              <div class="full">
+                <label for="support">support request</label>
+              </div>
+            </fieldset>
+
+            <div class="form-group span-all">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <button>submitt</button>
+
+          </form>
+
+	</card>
+
+	<card class="omoss" id="omoss">
+          <h1>om oss</h1>
+          <form>
+            <div class="form-group">
+              <label for="fname">inrigenser</label>
+              <input type="text" name="first_name" id="fname" required>
+            </div>
+
+            <div class="form-group span-all">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <button>submitt</button>
+
+          </form>
+
+	</card>
+
+          </select>
+>>>>>>> misc
       </nav>
 
       <div class="cards">
@@ -292,9 +462,16 @@
             <img class="left" src="ryskapannkakor.png" alt="ryska pannkakor">
           </a>
 
+<<<<<<< HEAD
       <section>.support {
 	        display: none;
 	    }
+=======
+          <section>.contact {
+	    display: none;
+	    }
+
+>>>>>>> misc
             <p class="panntext1">ryska pannkakor</p>
             <p class="panntext2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
               Autem in veniam vel delectus perferendis</p>
@@ -327,7 +504,11 @@
     <script>
 
      document.addEventListener("DOMContentLoaded", () => {
+<<<<<<< HEAD
        const toggle = document.getElementById("supportToggle");
+=======
+       const toggle = document.getElementById("contactToggle");
+>>>>>>> misc
        const support = document.getElementById("support");
 
        if (!toggle || !support) return;
@@ -351,6 +532,7 @@
      });
 
      document.addEventListener("DOMContentLoaded", () => {
+<<<<<<< HEAD
        const toggle = document.getElementById("ommigToggle");
        const ommig = document.getElementById("ommig");
 
@@ -362,7 +544,28 @@
        });
      });
      
+=======
+       const toggle = document.getElementById("omossToggle");
+       const omoss = document.getElementById("omoss");
+
+       if (!toggle || !omoss) return;
+
+       toggle.addEventListener("click", e => {
+	 e.preventDefault();
+	 contact.classList.toggle("open");
+       });
+     });
+
+
+>>>>>>> misc
     </script>
 
   </body>
 </html>
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> misc
