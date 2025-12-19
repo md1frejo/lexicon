@@ -23,6 +23,7 @@
       <a href="#amerikansk" class="skip-link"></a>
       <a href="#franska" class="skip-link"></a>
 
+<<<<<<< HEAD
       <nav class="nav">
 <<<<<<< HEAD
 	      <img src="farmors_pannkakor.png" alt="logo">   
@@ -48,6 +49,30 @@
 
 	      <card class="support" id="support">
           <form>
+=======
+   <nav class="nav">
+    <img src="farmors_pannkakor.png" alt="logo">   
+    <a href="merrecept.html">Recept</a>
+    <a href="#" id="omossToggle">om oss</a>
+    <a href="#" id="gereceptToggle">ge ett recept</a>
+    <a href="#" id="contactToggle">Support</a>
+    <button class="logga_in">logga in</button>
+
+    <button onclick="document.getElementById('recension').showModal()" class="">
+        vad tycker du?
+    </button> 
+
+    <button onclick="document.getElementById('kontakt').showModal()" class="">
+        kontakt
+    </button> 
+
+    <button onclick="document.getElementById('recension').showModal()" class="">
+        ge ett recept
+    </button> 
+
+    <card class="contact" id="support">
+         <form>
+>>>>>>> exercises
             <div class="full">
               <h1>om du har problem med pannkakorna</h1>
 =======
@@ -300,10 +325,34 @@
 
 	</card>
 
+<<<<<<< HEAD
 	<dialog id="kontakt">
           <form action="#" method="POST" class="">
             <div class="">
               <label for="fnamn">Förnamn</label>
+=======
+    <dialog id="kontakt">
+        <form action="#" method="POST" class="">
+            <div class="">
+                <label for="fnamn">Förnamn</label>
+            </div>
+                <input type="enamn" name="enamn" id="enamn"
+                        autocomplete="email" placeholder="svensson" required/>
+            </div>
+            <button type="button" class="" onclick="document.getElementById('kontakt').close()"
+                    aria-label="Stäng">x</button>
+        </form>
+
+    </dialog>
+
+    <dialog id="recension">
+        <div>
+            <div>
+                <h1>vad tycker du?</h1>
+                 <button type="button" class=""
+                    onclick="document.getElementById('recension').close()"
+                    aria-label="Stäng">x</button>
+>>>>>>> exercises
             </div>
             <input type="enamn" name="enamn" id="enamn"
                    autocomplete="email" placeholder="svensson" required/>
@@ -503,6 +552,7 @@
 
     <script>
 
+<<<<<<< HEAD
      document.addEventListener("DOMContentLoaded", () => {
 <<<<<<< HEAD
        const toggle = document.getElementById("supportToggle");
@@ -518,6 +568,19 @@
 	 support.classList.toggle("open");
        });
      });
+=======
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById("contactToggle");
+    const support = document.getElementById("support");
+
+    if (!toggle || !support) return;
+
+    toggle.addEventListener("click", e => {
+      e.preventDefault();
+      support.classList.toggle("open");
+    });
+  });
+>>>>>>> exercises
 
      document.addEventListener("DOMContentLoaded", () => {
        const toggle2 = document.getElementById("gereceptToggle");
