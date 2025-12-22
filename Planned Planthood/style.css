@@ -16,7 +16,7 @@
   font: inherit;
 }
 
-/* h1-h4 has to be reseted */
+/* h1-h4 has to be reseted in chrome */
 
 h1, h2, h3, h4, h5, h6 {
   font-size: 1rem;
@@ -52,6 +52,14 @@ h4,
 h5,
 h6 {
   text-wrap: balance;
+}
+
+/* custom css, naming convetion, class name corresponds to tag */
+
+/* nav best for a simple one row destribution */
+.nav {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 p,
