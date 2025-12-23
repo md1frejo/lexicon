@@ -115,8 +115,7 @@ h6 {
 
 .middle_inner {
   display: grid;
-  grid-column: 1fr 1fr;
-  grid-row: auto;
+  grid-template-columns: 1fr 1fr;
   background-color: cadetblue;
 }
 
