@@ -114,10 +114,13 @@ h6 {
   background-color: antiquewhite;
 }
 
-.middle {
+/* rows have to be defined in middle to get 50/50 */
 
-  grid-area: middle;
+.middle {
   display: grid;
+  height: 100%;
+  grid-area: middle;
+  grid-template-rows: 1fr 1fr;
   background-color: aqua;
 }
 
@@ -131,13 +134,20 @@ img {
 }
 
 .right {
+  display: grid;
   grid-area: right;
+  grid-template-rows: 1fr 1fr;
   background-color:brown;
 }
 
 .two_cols {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+.one_row {
+  display: grid;
+  grid-row: auto;
 }
 
 .two_rows {
