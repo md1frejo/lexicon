@@ -92,62 +92,68 @@ h6 {
   grid-template-rows: auto auto auto auto;
 }
 
-/* inner grid for pictures 2x3 matrice */
+/* inner grid for pictures 2x3 matrice 
+    remember that areas has to be on one row 
+    css irrationality */
+
 .pics {
-  width: 75%;
+  width: 50%;
+  height: 60vh;
   display: grid;
-  grid-template-columns: 1FR 1FR 1FR;
-  justify-items: center;
-  grid-template-areas: 
-  "left"
-  "middle"
-  "right"  
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "left middle right";
 }
 
+
 /* maybe unessesary, global width is set in pics */
-.pics img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
 
 /* first three columns: 1x3*/ 
 
 .left {
+  grid-area: left; 
   background-color: antiquewhite;
 }
 
 .middle {
+
+  grid-area: middle;
+  display: grid;
   background-color: aqua;
 }
 
 /* middle pictures: 1x2 1x1 */
-.two_cols {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  background-color: cadetblue;
-}
 
-.two_cols img {
+img {
   width: 100%;
-  height: auto;
-  display: block;
-}
-
-.one_row {
-  display: grid;
-  grid-row: auto;
-}
-
-.one_row img {
-  width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
 .right {
+  grid-area: right;
   background-color:brown;
 }
+
+.two_cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.two_rows {
+  display: grid;
+  grid-row: auto auto;
+}
+
+.middle_section {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  width: 50%;
+  background-color: aqua;
+}
+
+/* pre css */
 
 p,li,figcaption {
   text-wrap: pretty;
