@@ -97,6 +97,8 @@ h6 {
     css irrationality */
 
 .pics {
+  border: 0.5rem solid;
+  border-color: white;
   width: 50%;
   height: 60vh;
   display: grid;
