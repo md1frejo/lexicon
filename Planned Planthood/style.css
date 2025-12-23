@@ -94,6 +94,7 @@ h6 {
 
 /* inner grid for pictures 2x3 matrice */
 .pics {
+  width: 75%;
   display: grid;
   grid-template-columns: 1FR 1FR 1FR;
   justify-items: center;
@@ -101,6 +102,13 @@ h6 {
   "left"
   "middle"
   "right"  
+}
+
+/* maybe unessesary, global width is set in pics */
+.pics img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* first three columns: 1x3*/ 
@@ -120,9 +128,21 @@ h6 {
   background-color: cadetblue;
 }
 
+.two_cols img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .one_row {
   display: grid;
   grid-row: auto;
+}
+
+.one_row img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .right {
