@@ -62,9 +62,43 @@ h6 {
   justify-content: space-evenly;
 }
 
-p,
-li,
-figcaption {
+.nav p,span {
+  color:  var(--clr-accent);
+}
+
+/* two row logo */
+.logo {
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  background-color: var(--clr-primary-light-2);
+}
+
+/* main container */ 
+.container {
+  display: grid;
+  justify-items: center;
+  grid-template-rows: auto auto auto;
+}
+
+/* inner grid for 4 rows lorem */
+.lorem {
+  display: grid;
+  justify-items: center;
+  grid-template-rows: auto auto auto auto;
+}
+
+/* inner grid for pictures 2x3 matrice */
+.pics {
+  display: grid;
+  justify-items: center;  
+}
+
+p,li,figcaption {
   text-wrap: pretty;
   /* max-width: 55ch; */
 }
@@ -127,7 +161,7 @@ main {
   --fs-600: 1.5rem;
   --fs-700: 2rem;
   --fs-800: 2.5rem;
-  --fs-900: 3rem;
+  --fs-900: 3rem;Das
 
 
   /*** Theme setup ***/
