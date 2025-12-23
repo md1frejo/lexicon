@@ -95,7 +95,33 @@ h6 {
 /* inner grid for pictures 2x3 matrice */
 .pics {
   display: grid;
-  justify-items: center;  
+  grid-template-columns: 1FR 1FR 1FR;
+  justify-items: center;
+  grid-template-areas: 
+  "left"
+  "middle"
+  "right"  
+}
+
+/* first three columns: 1x3*/ 
+
+.left {
+  background-color: antiquewhite;
+}
+
+.middle {
+  background-color: aqua;
+}
+
+.middle_inner {
+  display: grid;
+  grid-column: 1fr 1fr;
+  grid-row: auto;
+  background-color: cadetblue;
+}
+
+.right {
+  background-color:brown;
 }
 
 p,li,figcaption {
