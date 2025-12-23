@@ -113,10 +113,16 @@ h6 {
   background-color: aqua;
 }
 
-.middle_inner {
+/* middle pictures: 1x2 1x1 */
+.two_cols {
   display: grid;
   grid-template-columns: 1fr 1fr;
   background-color: cadetblue;
+}
+
+.one_row {
+  display: grid;
+  grid-row: auto;
 }
 
 .right {
