@@ -62,10 +62,6 @@ h6 {
   justify-content: space-evenly;
 }
 
-.nav p,span {
-  color:  var(--clr-accent);
-}
-
 /* two row logo */
 .logo {
   display: flex;
@@ -110,6 +106,7 @@ h6 {
 
 .r2 {
   height: 30vh;
+  color: var(--clr-neutral-400);
   padding-bottom: 3rem;
 }  
 
@@ -122,6 +119,17 @@ h6 {
   width: 50%;
   height: 5rem;
   background-color: var(--clr-neutral-200)
+}
+
+.r5{
+  display: grid;
+  width: 50%;
+  background-color: aliceblue;
+  padding-top: 5rem;
+  justify-self: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto); /* two rows */
+
 }
 
 /* inner grid for 4 rows lorem */
@@ -212,16 +220,6 @@ img {
   background-color: aqua;
 }
 
-.text_box {
-  display: grid;
-  background-color: aliceblue;
-  padding-top: 5rem;
-  width: 50%;
-  justify-self: center;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, auto); /* two rows */
-}
-
 /* 4 cols => 5 divisions: |||||, so 2/3 is between 2 and 3  */
 
 .row1 {
@@ -235,7 +233,7 @@ img {
 }
 
 .row3 {
-  grid-column: 3 / 4;
+  grid-column: 4 / 5;
   grid-row: 1;
 }
 
