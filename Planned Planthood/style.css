@@ -246,7 +246,9 @@ img {
 .icon1 {
   width: 10rem;
   height: auto;
-  fill: blue;
+  fill: white;
+  background-color: var(--clr-green-200);
+  border-radius: 100px;
 }
 
 .icon:hover {
