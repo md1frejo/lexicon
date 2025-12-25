@@ -153,25 +153,64 @@ h6 {
   display: grid;
   height: fit-content;
   grid-template-rows:
-  auto
-  3rem
-  1fr
-  auto
-  min-content;
-
+    auto
+    2rem
+    auto
+    auto
+    auto;
+  grid-template-areas:
+    "c1"
+    "c2"
+    "c3"
+    "c4"
+    "c5";
   gap: 0.5rem;
+}
+
+.c1 {
+  background-color: blue;
+}
+
+.c2 {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start; 
+}
+
+.c5 {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  gap: 0.5rem 1rem;
+  grid-template-areas:
+    "icon line1"
+    "icon line2";
+}
+
+.c5 svg {
+  grid-area: icon;
+  width: 3rem;
+  height: 3rem;
+  fill: black;
+  align-self: center;
+}
+
+.line1 {
+  grid-area: line1;
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.line2 {
+  grid-area: line2;
+  font-size: 4rem;
 }
 
 .card button {
+  border-top: 2rem;
   border-radius: 15px;
   color: brown;
   background-color: bisque    ;
-}
-
-.card_buttons {
-  display: flex;
-  gap: 0.5rem;
-  justify-content: flex-start; 
 }
 
 .card_footer {
@@ -305,7 +344,6 @@ img {
   fill: white;
 }
 
-
 .icon2 {
   width: 10rem;
   height: auto;
@@ -318,7 +356,6 @@ img {
 .icon:hover {
   fill: red;
 }o
-
 
 /* prefigure css */
 
