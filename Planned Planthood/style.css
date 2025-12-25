@@ -151,14 +151,15 @@ h6 {
 
 .card {
   display: grid;
-  grid-template-rows: repeat(5, 20% 10% 30% 20% 20%);
-  gap: 0.5rem;
-}
+  height: fit-content;
+  grid-template-rows:
+  auto
+  3rem
+  1fr
+  auto
+  min-content;
 
-.card_buttons {
-  display: flex;
   gap: 0.5rem;
-  justify-content: center; /* or space-between */
 }
 
 .card button {
@@ -168,6 +169,12 @@ h6 {
 }
 
 .card_buttons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-start; 
+}
+
+.card_footer {
   display: flex;
   gap: 0.5rem;
   justify-content: center; /* or space-between */
