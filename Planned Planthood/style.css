@@ -134,7 +134,7 @@ h6 {
 .r6 {
   display: flex;
   padding-top: 3rem;
-  padding-bottom: 1rem;
+  padding-bottom: 4rem;
   justify-content: center;
   width: 50%;
   height: 5rem;
@@ -143,6 +143,7 @@ h6 {
 
 .r7 {
   display: grid;
+  width: 50%;
   grid-template-rows: repeat(4, auto);
   grid-template-columns: repeat(4, auto);
   gap: 1rem;
@@ -150,8 +151,26 @@ h6 {
 
 .card {
   display: grid;
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 20% 10% 30% 20% 20%);
   gap: 0.5rem;
+}
+
+.card_buttons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center; /* or space-between */
+}
+
+.card button {
+  border-radius: 15px;
+  color: brown;
+  background-color: bisque    ;
+}
+
+.card_buttons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center; /* or space-between */
 }
 
 /* inner grid for 4 rows lorem */
