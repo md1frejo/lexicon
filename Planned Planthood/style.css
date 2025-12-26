@@ -31,6 +31,7 @@ html {
 /* min body height */
 body {
   min-height: 100vh;
+  background-color: var(--clr-neutral-100);
 }
 
 /* responsive images/videos */
@@ -193,6 +194,27 @@ h6 {
   color: var(--clr-neutral-100);
   background-color: var(--clr-green-400);
   border-radius: 15px;
+  margin-bottom: 3rem;
+}
+
+.left {
+  grid-area: left;
+  display: grid;
+  padding: 1.5rem;
+  grid-template-columns: 2fr 1fr;
+}
+
+.left::before {
+  content: "";;
+}
+
+.left svg {
+  width: 40%;
+  height: auto;
+  margin: 2rem;
+  background-color: var(--clr-green-400);
+  border-radius: 100px;
+ 
 }
 
 .card {
@@ -295,7 +317,7 @@ h6 {
   width: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "left middle right";
+  grid-template-areas: "left_img middle right";
 }
 
 
@@ -303,8 +325,8 @@ h6 {
 
 /* first three columns: 1x3*/ 
 
-.left {
-  grid-area: left; 
+.left_img {
+  grid-area: left_img; 
   background-color: antiquewhite;
 }
 
