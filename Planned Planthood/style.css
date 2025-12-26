@@ -209,9 +209,9 @@ h6 {
 }
 
 .left svg {
-  width: 40%;
+  width: 100%;
+  max-width: 300px;
   height: auto;
-  margin: 2rem;
   background-color: var(--clr-green-400);
   border-radius: 100px;
  
