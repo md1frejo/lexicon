@@ -54,6 +54,17 @@ h6 {
 
 /* custom css, naming convetion, class name corresponds to tag */
 
+.header {
+  display: grid;
+  grid-column: auto;
+  width: 75%;
+}
+.header nav {
+  display: flex;
+  width: a;
+  justify-content: space-between;
+}
+
 /* two row logo */
 .logo {
   display: flex;
@@ -64,27 +75,17 @@ h6 {
 
 .main {
   display: grid;
-  grid-template-columns: auto;
   width: 75%;
-  justify-content: center;
+  margin: 0 auto;
   justify-items: center;
-  background-color: var(--clr-primary-102%light-2);
-}
 
-/* main container one col with 8 rows, then footer*/ 
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(8, auto);
 
-.container {
-  display: grid;
-  width: 50%;
-  justify-items: center;
-  grid-template-rows:
-    auto
-    auto
-    auto
-    auto
-    auto
-    auto
-    auto102%
+  grid-template-areas:
+    "r1"
+    "r2"
+    "r3"
     "r4"
     "r5"
     "r6"
@@ -103,19 +104,19 @@ h6 {
 }  
 
 .r3 {
-  width: 50%;
+  width: auto;
   height: 60vh;
 }  
 
 .r4 {
-  width: 50%;102%
+  width: auto;
   height: 5rem;
   background-color: var(--clr-neutral-200)
 }
 
 .r5{
   display: grid;
-  width: 50%;
+  width: auto;
   background-color: aliceblue;
   padding-top: 5rem;
   justify-self: center;
@@ -124,19 +125,21 @@ h6 {
 
 }
 
+/* why does not width: auto work? */
+
 .r6 {
   display: flex;
   padding-top: 3rem;
   padding-bottom: 4rem;
-  justify-content: center;102%
-  width: 50%;
+  justify-content: center;
+  width: 100%;
   height: 5rem;
   background-color: var(--clr-neutral-200)
 }
 
 .r7 {
   display: grid;
-  width: 50%;
+  width: auto;
   grid-template-rows: repeat(4, auto);
   grid-template-columns: repeat(4, auto);
   gap: 1rem;
@@ -146,7 +149,7 @@ h6 {
   display: grid;
   height: fit-content;
   grid-template-rows:
-    auto
+    clamp(14rem, 30vw, 20rem)
     auto
     auto
     auto
@@ -161,8 +164,7 @@ h6 {
 }
 
 .card_im {
-  width: 50%;
-  height: fit-content;
+  aspect-ratio: 3/4;
   object-fit: cover;
 }
 
@@ -176,7 +178,7 @@ h6 {
   display: flex;
   justify-content: space-between;
   padding: 0.75rem 0.5rem;
-  font-size: 1rem;
+  font-size: 0.8rem;
   border-radius: 25%;
   color: aliceblue;
 }
