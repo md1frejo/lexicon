@@ -154,27 +154,39 @@ h6 {
   height: fit-content;
   grid-template-rows:
     auto
-    2rem
+    auto
     auto
     auto
     auto;
   grid-template-areas:
-    "c1"
-    "c2"
+    "card_im"
+    "card_buttons"
     "c3"
     "c4"
     "c5";
   gap: 0.5rem;
 }
 
-.c1 {
-  background-color: blue;
+.card_im {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
 }
 
-.c2 {
+.card_buttons {
   display: flex;
-  gap: 1rem;
-  justify-content: flex-start; 
+  min-height: 4rem;
+  min-width: auto;
+  justify-content: space-evenly; 
+}
+
+.card_buttons button {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 1.5rem;
+  font-size: 2rem;
+  border-radius: 25%;
+  color: aliceblue;
 }
 
 .c5 {
@@ -204,13 +216,6 @@ h6 {
 .line2 {
   grid-area: line2;
   font-size: 1.5rem;
-}
-
-.card button {
-  border-top: 2rem;
-  border-radius: 15px;
-  color: brown;
-  background-color: bisque    ;
 }
 
 .card_footer {
