@@ -147,10 +147,11 @@ h6 {
 
 .r8 {
   display: grid;
+  background-color: var(--clr-neutral-100);
   grid-template-columns: 1fr 2fr;
   grid-template-rows: auto auto auto;
   gap: 1rem;
-  width: auto;
+  width: 100%;
   background-color: aliceblue;
   padding-top: 5rem;
   justify-self: center;
@@ -162,18 +163,36 @@ h6 {
 
 .t1 {
   grid-area: t1;
-  size: rem;
-  background-color: var(--clr-green)
+  color: var(--clr-primary-dark);
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 .t2 {
   grid-area: t2;
-  background-color: lightblue
+  color: var(--clr-primary-dark);
+  font-size: 1rem;
+  font-weight: 300;
 }
 
-.t3{
+.t3 {
   grid-area: t3;
-  background-color: blanchedalmond;
+  width: 40%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  }
+
+.t3::before {
+  content: "";
+}
+
+.t3 h3 {
+  font-size: 1rem;
+  padding: 0.5rem;
+  width: fit-content;
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-green-400);
+  border-radius: 15px;
 }
 
 .card {
@@ -381,7 +400,7 @@ img {
 }
 
 .icon1 {
-  width: 60%;
+  width: 15%;
   fill: white;
 }
 
