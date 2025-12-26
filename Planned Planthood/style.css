@@ -148,21 +148,22 @@ h6 {
 .r8 {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: repeat(3, auto);
+  grid-template-rows: auto auto auto;
   gap: 1rem;
   width: auto;
   background-color: aliceblue;
   padding-top: 5rem;
   justify-self: center;
   grid-template-areas: 
-  "left t1"
+  "left t1" 90%
   "left t2"
   "left t3";
 }
 
 .t1 {
   grid-area: t1;
-  background-color: rebeccapurple
+  size: rem;
+  background-color: var(--clr-green)
 }
 
 .t2 {
