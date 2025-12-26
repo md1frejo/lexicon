@@ -365,7 +365,13 @@ img {
 
 .icon:hover {
   fill: red;
-}o
+}
+
+.footer {
+  background-color: var(--clr-green-200);
+  width: auto;
+  height: 40%;
+}
 
 /* prefigure css */
 
