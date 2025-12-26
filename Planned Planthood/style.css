@@ -68,8 +68,11 @@ h6 {
 }
 
 .main {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto;
+  width: 75%;
   justify-content: center;
+  justify-items: center;
   background-color: var(--clr-primary-light-2);
 }
 
@@ -77,7 +80,7 @@ h6 {
 
 .container {
   display: grid;
-  width: 50%%;
+  width: 50%;
   justify-items: center;
   grid-template-rows:
     auto
@@ -161,35 +164,44 @@ h6 {
   grid-template-areas:
     "card_im"
     "card_buttons"
-    "c3"
-    "c4"
-    "c5";
+    "flower_name"
+    "description"
+    "author";
   gap: 0.5rem;
 }
 
 .card_im {
-  width: 100%;
-  aspect-ratio: 1 / 1;
+  width: 50%;
+  height: fit-content;
   object-fit: cover;
 }
 
 .card_buttons {
   display: flex;
-  min-height: 4rem;
-  min-width: auto;
-  justify-content: space-evenly; 
+  flex-wrap: wrap;
+  gap: 0.5rem; 
 }
 
 .card_buttons button {
   display: flex;
   justify-content: space-between;
-  padding: 0.75rem 1.5rem;
-  font-size: 2rem;
+  padding: 0.75rem 0.5rem;
+  font-size: 1rem;
   border-radius: 25%;
   color: aliceblue;
 }
 
-.c5 {
+.flower_name {
+  padding: 3rem;
+  color: aqua;
+}
+
+.description {
+  color: aquamarine;
+}
+
+.author {
+  padding: 2rem;
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-rows: auto auto;
@@ -199,7 +211,7 @@ h6 {
     "icon line2";
 }
 
-.c5 svg {
+.author svg {
   grid-area: icon;
   width: 3rem;
   height: 3rem;
@@ -238,6 +250,7 @@ h6 {
 .pics {
   border: 0.5rem solid;
   border-color: white;
+  width: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas: "left middle right";
