@@ -145,6 +145,36 @@ h6 {
   gap: 1rem;
 }
 
+.r8 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(3, auto);
+  gap: 1rem;
+  width: auto;
+  background-color: aliceblue;
+  padding-top: 5rem;
+  justify-self: center;
+  grid-template-areas: 
+  "left t1"
+  "left t2"
+  "left t3";
+}
+
+.t1 {
+  grid-area: t1;
+  background-color: rebeccapurple
+}
+
+.t2 {
+  grid-area: t2;
+  background-color: lightblue
+}
+
+.t3{
+  grid-area: t3;
+  background-color: blanchedalmond;
+}
+
 .card {
   display: grid;
   height: fit-content;
@@ -369,6 +399,7 @@ img {
 
 .footer {
   background-color: var(--clr-green-200);
+  font-size: 4rem;
   width: auto;
   height: 40%;
 }
@@ -381,6 +412,7 @@ p,li,figcaption {
 }
 
 /* for container queries, landmarks as containers */
+
 body> :is(header, footer),
 main {
   container-type: inline-size;
