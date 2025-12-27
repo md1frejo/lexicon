@@ -53,17 +53,21 @@ h6 {
   text-wrap: balance;
 }
 
+/* reset end */
+
 /* custom css, naming convetion, class name corresponds to tag */
 
 .header {
-  display: grid;
-  grid-column: auto;
   width: 75%;
+  margin: 0 auto;
 }
+
 .header nav {
   display: flex;
-  width: a;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center; /* center the nav items */
+  gap: 2rem;
+  background-color: var(--clr-neutral-100);
 }
 
 /* two row logo */
@@ -79,10 +83,8 @@ h6 {
   width: 75%;
   margin: 0 auto;
   justify-items: center;
-
   grid-template-columns: 1fr;
   grid-template-rows: repeat(8, auto);
-
   grid-template-areas:
     "r1"
     "r2"
