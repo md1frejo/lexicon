@@ -65,17 +65,16 @@ h6 {
 .header nav {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  color: var(--clr-green-400); 
+  gap: 2rem;
   font-size: 1.5rem;
-  margin-bottom: 1rem;
-  gap: 56rem;
   background-color: var(--clr-neutral-100);
 }
 
-.nav_men {
+.nav_mem {
   display: flex;
   gap: 1rem;
+  margin-right: 1rem;
+  margin-left: auto; 
 }
 
 .imlogo {
