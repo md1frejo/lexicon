@@ -92,7 +92,7 @@ h6 {
   height: auto;
   display: block;
   margin-bottom: 1rem;
-  color: var(--clr-green-200);
+  color: var(--clr-green-500);
 }
 
 /* two row logo with icon on the left */
@@ -101,6 +101,7 @@ h6 {
   grid-area: logo_text;
   display: flex;
   flex-direction: column;
+  color: var(--clr-accent);
 }
 
 /* main layout */
@@ -124,14 +125,17 @@ h6 {
 }
 
 .r1 {
-  height: 10rem;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  height: 4rem;
 }
 
 .r2 {
-  height: 30vh;
-  color: var(--clr-neutral-400);102%
-  padding-bottom: 3rem;
-}  
+  height: 10vh;
+  place-items: center;
+  text-align: center;
+  margin-bottom: 2rem;
+}
 
 .r3 {
   width: auto;
@@ -329,10 +333,11 @@ h6 {
 }
 
 /* inner grid for 4 rows lorem */
+
 .lorem {
   display: grid;
-  justify-items: center;
-  grid-template-rows: auto auto auto auto;
+  grid-template-rows: repeat(4, auto);
+  gap: 0.25rem;
 }
 
 /* inner grid for pictures 2x3 matrice 
