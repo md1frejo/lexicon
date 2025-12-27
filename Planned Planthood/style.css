@@ -65,13 +65,35 @@ h6 {
 .header nav {
   display: flex;
   align-items: center;
-  justify-content: center; /* center the nav items */
+  justify-content: space-evenly;
+  color: var(--clr-green-400); 
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
   gap: 2rem;
   background-color: var(--clr-neutral-100);
 }
 
-/* two row logo */
-.logo {
+.imlogo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  justify-items: end;
+  grid-template-areas: 
+   "hsvg logo_text"   
+}
+
+.hsvg {
+  grid-area: hsvg;
+  width: 50%;
+  height: auto;
+  display: block;
+  color: var(--clr-green-200);
+}
+
+/* two row logo with icon on the left */
+
+.logo_text {
+  grid-area: logo_text;
   display: flex;
   flex-direction: column;
 }
