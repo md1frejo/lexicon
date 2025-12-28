@@ -148,7 +148,7 @@ h6 {
   background-color: var(--clr-neutral-200)
 }
 
-.r5{
+.r5 {
   display: grid;
   width: auto;
   background-color: aliceblue;
@@ -156,7 +156,12 @@ h6 {
   justify-self: center;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, auto); /* two rows */
+}
 
+.r5 span {
+  font-size: 2rem;
+  color: var(--clr-neutral-900);
+  font-weight: var(--fs-400);
 }
 
 /* why does not width: auto work? */
@@ -435,9 +440,47 @@ img {
 }
 
 .row3 {
-  grid-column: 4 / 5;
+  grid-column: 3 / 5;
   grid-row: 1;
 }
+
+.input-wrap {
+  display: flex;
+  align-items: center;
+  aspect-ratio: 10/1;
+  max-width: 400px;
+  background: white;
+  border: 2px solid #ccc;
+  border-radius: 999px;
+  padding: 0.25rem;
+}
+
+.input-wrap input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border-radius: 999px;
+}
+
+.input-wrap button {
+  border: none;
+  padding: 0.6rem 1.2rem;
+  margin-left: 0.25rem;
+
+  border-radius: 999px;
+  background: #4caf50;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.input-wrap button:hover {
+  background: #43a047;
+}
+
+
 
 .input {
   border: 0.1rem solid;
@@ -447,7 +490,7 @@ img {
 
 .icon-wrap {
   width: 20rem;
-  aspect-ratio: 1;
+  aspect-ratio: 1/1;
   background: var(--clr-green-200);
   border-radius: 9999px;
   display: grid;
@@ -455,7 +498,7 @@ img {
 }
 
 .icon1 {
-  width: 15%;
+  width: 30%;
   fill: white;
 }
 
