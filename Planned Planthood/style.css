@@ -315,12 +315,15 @@ h6 {
 }
 
 .flower_name {
-  padding: 3rem;
-  color: aqua;
+  padding: 1rem;
+  color: var(--clr-primary);
 }
 
 .description {
-  color: aquamarine;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  color: var(--clr-primary-dark);
+  font-size: 1rem;
 }
 
 .author {
