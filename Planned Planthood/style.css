@@ -561,10 +561,30 @@ img {
 }
 
 .footer {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-areas: 
+    "footer_left footer_middle footer_right";
+  width: 100%;
   background-color: var(--clr-green-200);
-  font-size: 4rem;
-  width: auto;
-  height: 40%;
+}
+
+.footer_left {
+  grid-area: footer_left;
+}
+
+.footer_middle {
+  grid-area: footer_middle;
+}
+
+.footer_right {
+  grid-area: footer_right;
+}
+
+.left_mid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 /* prefigure css */
