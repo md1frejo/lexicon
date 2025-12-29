@@ -154,7 +154,7 @@ h6 {
   background-color: aliceblue;
   padding-top: 5rem;
   justify-self: center;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, auto); /* two rows */
 }
 
@@ -455,18 +455,20 @@ img {
 /* 4 cols => 5 divisions: |||||, so 2/3 is between 2 and 3  */
 
 .row1 {
-  grid-column: 3 / 4;
+  grid-column: 2 / 4;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
   grid-row: 1;
-  height: 3rem;
+  height: 1rem;
 }
 
 .row2 {
-  grid-column: 3 / 4;
+  grid-column: 2/ 4;
   grid-row: 2;
 }
 
 .row3 {
-  grid-column: 4 / 6;
+  grid-column:  4/ 4;
   grid-row: 1;
 }
 
@@ -527,7 +529,8 @@ img {
 }
 
 .icon-wrap {
-  width: 20rem;
+  height: 15rem;
+  width: auto;
   aspect-ratio: 1/1;
   background: var(--clr-green-200);
   border-radius: 9999px;
