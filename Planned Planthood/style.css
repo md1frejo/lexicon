@@ -111,12 +111,14 @@ h6 {
   width: 75%;
   margin: 0 auto;
   justify-items: center;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr; 
+/*  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
   grid-template-rows: repeat(8, auto);
+/*  grid-template-rows: repeat(auto-fit, minmax(250px, 1fr)); */
   grid-template-areas:
-    "r1"
-    "r2"
-    "r3"
+    "top_text"
+    "lorem_text"
+    "pics_row"
     "r4"
     "r5"
     "r6"
@@ -124,20 +126,20 @@ h6 {
     "r8";
 }
 
-.r1 {
+.top_text {
   margin-top: 4rem;
   margin-bottom: 2rem;
   height: 4rem;
 }
 
-.r2 {
+.lorem_text {
   height: 10vh;
   place-items: center;
   text-align: center;
   margin-bottom: 2rem;
 }
 
-.r3 {
+.pics_row {
   width: auto;
   height: 60vh;
 }  
@@ -155,8 +157,11 @@ h6 {
   padding-top: 5rem;
   justify-self: center;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, auto); /* two rows */
+/*  grid-template-rows: repeat(2, auto);  two rows */
+/*  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
 }
+
+*/ 
 
 .r5 span {
   font-size: 2rem;
@@ -178,17 +183,31 @@ h6 {
 
 .r7 {
   display: grid;
-  width: auto;
-  grid-template-rows: repeat(4, auto);
-  grid-template-columns: repeat(4, auto);
+  margin-inline: auto;
+  grid-template-columns: repeat(4, auto); 
+/*  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
   gap: 1rem;
+}
+ 
+@media (max-width: 1024px) {
+  .r7 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .r7 {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .r8 {
   display: grid;
   background-color: var(--clr-neutral-100);
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: auto auto auto;
+  grid-template-columns: 1fr 2fr; 
+/*  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+  grid-template-rows: auto auto auto; 
+/*  grid-template-rows: repeat(auto-fit, minmax(250px, 1fr)); */
   gap: 1rem;
   width: 100%;
   background-color: aliceblue;
@@ -364,9 +383,9 @@ h6 {
   justify-content: center; /* or space-between */
 }
 
-/* inner grid for 4 rows lorem */
+/* inner grid for 4 rows lorem only one col no need for responsive*/
 
-.lorem {
+.lorem_rows {
   display: grid;
   grid-template-rows: repeat(4, auto);
   margin-bottom: 1rem;
@@ -383,6 +402,18 @@ h6 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas: "left_img middle right";
+}
+
+@media (max-width: 1024px) {
+  .pics {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .pics {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 
