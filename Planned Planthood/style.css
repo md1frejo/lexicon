@@ -119,7 +119,7 @@ h6 {
     "top_text"
     "lorem_text"
     "pics_row"
-    "r4"
+    "register"
     "r5"
     "r6"
     "r7"
@@ -144,7 +144,7 @@ h6 {
   height: 60vh;
 }  
 
-.r4 {
+.register {
   width: auto;
   height: 5rem;
   background-color: var(--clr-neutral-200)
@@ -416,7 +416,6 @@ h6 {
   }
 }
 
-
 /* maybe unessesary, global width is set in pics */
 
 /* first three columns: 1x3*/ 
@@ -492,6 +491,7 @@ img {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   grid-row: 1;
+  font-size: 2rem;
   height: 1rem;
 }
 
