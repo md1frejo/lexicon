@@ -72,7 +72,7 @@ h6 {
 
 .nav_mem {
   display: flex;
-  gap: 1rem;
+  gap: 3rem;
   margin-right: 1rem;
   margin-left: auto; 
 }
@@ -127,6 +127,7 @@ h6 {
 }
 
 .top_text {
+  background-color: var(--clr-neutral-100));
   margin-top: 4rem;
   margin-bottom: 2rem;
   height: 4rem;
@@ -145,9 +146,9 @@ h6 {
 }  
 
 .register {
-  width: auto;
+  width: 100%;
   height: 5rem;
-  background-color: var(--clr-neutral-200)
+  background-color: var(--clr-neutral-100)
 }
 
 .register_text {
@@ -155,25 +156,23 @@ h6 {
   width: 100%;
   background-color: var(--clr-neutral-100);
   padding-top: 5rem;
-  justify-self: center;
   grid-template-columns: repeat(6, 1fr);
-/*  grid-template-rows: repeat(2, auto);  two rows */
-/*  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+  gap: 1rem;
 }
 
+/* tablet */
 @media (max-width: 1024px) {
   .register_text {
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
+/* mobile */
 @media (max-width: 600px) {
   .register_text {
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 }
-
-*/ 
 
 .register_text span {
   font-size: 2rem;
@@ -339,11 +338,6 @@ h6 {
   pointer-events: none;
 }
 
-/* .card_im {
-  aspect-ratio: 3/4;
-  object-fit: cover;
-}
-*/
 .card_buttons {
   display: flex;
   flex-wrap: wrap;
@@ -511,7 +505,7 @@ img {
 /* 4 cols => 5 divisions: |||||, so 2/3 is between 2 and 3  */
 
 .row1 {
-  grid-column: 2 / 6;
+  grid-column: 3 / 6;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   grid-row: 1;
@@ -520,19 +514,20 @@ img {
 }
 
 .row2 {
-  grid-column: 2/ 6;
+  grid-column: 3/ 6;
   grid-row: 2;
   margin-bottom: 1rem;
 }
 
 .row3 {
-  grid-column:  4/ 6;
+  grid-column:  5/ 6;
   grid-row: 1;
 }
 
 .input-wrap {
   display: flex;
   align-items: center;
+  width: 30%;
   aspect-ratio: 10/1;
   max-width: 400px;
   background: white;
@@ -543,6 +538,7 @@ img {
 
 .input-wrap input {
   flex: 1;
+  width: 30%;
   border: none;
   outline: none;
   padding: 0.75rem 1rem;
@@ -553,6 +549,7 @@ img {
 .input-wrap button {
   border: none;
   padding: 0.6rem 1.2rem;
+  width: 30%;
   margin-left: 0.25rem;
   border-radius: 999px;
   background: #4caf50;
