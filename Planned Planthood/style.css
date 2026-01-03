@@ -118,7 +118,6 @@ h6 {
   width: auto; /* remove percentage */
 }
 
-
 .logo {
   grid-area: logo;
   width: 50%;
@@ -139,7 +138,7 @@ h6 {
 .he3 {  
   display: grid;
   grid-area: he3;
-  grid-column: 3/6;
+  grid-column: 2/6;
   grid-row: 1/2;
   margin-top: 1rem;
   font-size: 2rem;
@@ -149,8 +148,7 @@ h6 {
 .he4 {
   display: grid;
   grid-area: he4;
-  grid-template-rows: auto;
-  grid-column: 5/6;
+  grid-column: 4/6;
   display: flex;
   gap: 1rem;
   font-size: 2rem;
@@ -423,7 +421,8 @@ h6 {
   object-fit: cover;
 }
 
-.watermark {
+/* remove? */
+.he44 {
   position: absolute;
   inset: 50%;
   transform: translate(-50%, -50%);
