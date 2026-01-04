@@ -76,6 +76,19 @@ h6 {
   margin: 0 auto;
 }
 
+.drop-menu {
+  display: flex;
+  gap: 1rem;
+}
+
+.drop-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
 /* tablet */
 @media (max-width: 1024px) {
   .nav {
@@ -272,9 +285,16 @@ h6 {
   background-color: var(--clr-neutral-100);
   padding-top: 4rem;
   grid-template-columns: repeat(6, 1fr);
-  gap: 1rem;
+  gap: 2rem;
 }
 
+/* input not working for mobile */
+@media (max-width: 600px) {
+  .register_text {
+    display: flex;
+  flex-direction: column;
+  }
+}
 
 .register_text span {
   font-size: 2.5rem;
@@ -285,7 +305,7 @@ h6 {
 /* tablet */
 @media (max-width: 1024px) {
   .register_text {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 2fr;
   }
 }
 
@@ -293,10 +313,6 @@ h6 {
 @media (max-width: 600px) {
   .register_text {
     grid-template-columns: 1fr;
-  }
-
-  .register_text > * {
-    grid-column: auto;
   }
 }
 
@@ -331,8 +347,6 @@ h6 {
   gap: 1rem;
 }
  
-
-
 @media (max-width: 1024px) {
   .blommor {
     grid-template-columns: repeat(3, 1fr);
@@ -668,16 +682,18 @@ img {
 }
 
 
-/* not working */
+/* ugly but it works*/
 @media (max-width: 1024px) {
   .row3 {
-    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-row: 6/6;
   }
 }
 
 @media (max-width: 600px) {
   .row3 {
-    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-row: 6/6;
   }
 }
 
@@ -691,6 +707,15 @@ img {
   border: 2px solid #ccc;
   border-radius: 999px;
   padding: 0.25rem;
+}
+
+/* input ugly solution */
+@media (max-width: 1024px) {
+  .input-wrap {
+    display: grid;
+    grid-row: 6/6;
+    width: 60%;
+  }
 }
 
 .input-wrap input {

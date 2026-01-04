@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planned Plantings</title>
     <link rel="stylesheet" href="style.css" />
+
+    <script>
+        const toggle = document.querySelector('.drop-menu-toggle');
+        const menu = document.querySelector('.drop-menu');
+        toggle.addEventListener('click', () => { menu.classList.toggle('open');
+        });
+    </script>
+
 </head>
 
 <body class="body">
@@ -42,6 +50,14 @@
                 <line x1="4" y1="12" x2="20" y2="12" />
                 <line x1="4" y1="18" x2="20" y2="18" />
             </svg>
+
+            <!--  not working */
+            <div class="drop-menu">
+                <a href="#">Hem</a>
+                <a href="#">Historik</a>
+                <a href="#">Tips</a>
+                <a href="#">Kontakt</a>
+            </div> -->
         </div>
     </nav>
 
