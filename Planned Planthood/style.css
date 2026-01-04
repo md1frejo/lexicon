@@ -52,12 +52,7 @@ video {
 }
 
 /* make headings wrap better */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2,h3, h4, h5, h6 {
   text-wrap: balance;
 }
 
@@ -76,6 +71,7 @@ h6 {
   margin: 0 auto;
 }
 
+/* not working, hamburger dropdown */
 .drop-menu {
   display: flex;
   gap: 1rem;
@@ -88,8 +84,7 @@ h6 {
   cursor: pointer;
 }
 
-
-/* tablet */
+/* nav tablet */
 @media (max-width: 1024px) {
   .nav {
     grid-template-columns: 1fr;
@@ -117,6 +112,8 @@ h6 {
   }
 }
 
+
+/* logo placement */
 .he2 {
   display: grid;
   grid-area: he2;
@@ -130,8 +127,7 @@ h6 {
   column-gap: 1rem;
 }
 
-
-/* logo and expansion when not destop */
+/* logo expansion when not destop */
 .logo {
   grid-area: logo;
   width: 30%;
@@ -172,6 +168,7 @@ h6 {
   color: var(--clr-accent);
 }
 
+/* right side menu */
 .he4 {
   display: grid;
   grid-area: he4;
@@ -214,6 +211,7 @@ h6 {
    "hsvg logo_text"   
 }
 
+/* logo */
 .hsvg {
   grid-area: hsvg;
   width: 65%;
@@ -232,7 +230,7 @@ h6 {
   color: var(--clr-accent);
 }
 
-/* main layout */
+/* main layout, nota bene, unconventional two mains */
 
 .main {
   display: grid;
@@ -318,7 +316,7 @@ h6 {
 
 /* why does not width: auto work? */
 
-/* --clr-neutral-100 did not work so i had to use #ededed */
+/* --clr-neutral-100 did not work so i had to use #ededed instead */
 .parag {
   display: flex;
   padding-top: 3rem;
@@ -347,6 +345,7 @@ h6 {
   gap: 1rem;
 }
  
+/* shrink flowers  */
 @media (max-width: 1024px) {
   .blommor {
     grid-template-columns: repeat(3, 1fr);
@@ -359,6 +358,7 @@ h6 {
   }
 }
 
+/* last text on våra tidigare... */
 .last_text {
   display: grid;
   background-color: var(--clr-neutral-100);
@@ -389,6 +389,7 @@ h6 {
   }
 }
 
+/* t1-t3 grid areas */
 .t1 {
   grid-area: t1;
   color: var(--clr-primary-dark);
@@ -412,6 +413,7 @@ h6 {
   grid-template-columns: 1fr 1fr;
   }
 
+/* blank hack */
 .t3::before {
   content: "";
 }
@@ -429,6 +431,7 @@ h6 {
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
+/* why not? */
 .t3 h3:hover {
   background-color: red;
 }
@@ -452,6 +455,7 @@ h6 {
  
 }
 
+/* flower card */
 .card {
   display: grid;
   height: fit-content;
@@ -480,17 +484,6 @@ h6 {
   display: block;
   aspect-ratio: 3 / 4;
   object-fit: cover;
-}
-
-/* remove? */
-.he44 {
-  position: absolute;
-  inset: 50%;
-  transform: translate(-50%, -50%);
-  width: 120px;    
-  height: auto;
-  opacity: 0.7;
-  pointer-events: none;
 }
 
 .card_buttons {
@@ -553,11 +546,10 @@ h6 {
 .card_footer {
   display: flex;
   gap: 0.5rem;
-  justify-content: center; /* or space-between */
+  justify-content: center; 
 }
 
-/* inner grid for 4 rows lorem only one col no need for responsive*/
-
+/* inner grid for 4 rows lorem only one col no need for responsive? */
 .lorem_rows {
   display: grid;
   grid-template-rows: repeat(4, auto);
@@ -682,7 +674,7 @@ img {
 }
 
 
-/* ugly but it works*/
+/* ugly but it works */
 @media (max-width: 1024px) {
   .row3 {
     grid-template-rows: auto auto auto auto auto auto;
@@ -798,6 +790,7 @@ img {
   width: 100%;
 }
 
+/* last section */
 .footer {
   display: grid;
   grid-template-columns: 2fr21fr 3fr 1fr 2fr;
