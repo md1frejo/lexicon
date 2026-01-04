@@ -76,6 +76,7 @@ h6 {
   margin: 0 auto;
 }
 
+/* tablet */
 @media (max-width: 1024px) {
   .nav {
     grid-template-columns: 1fr;
@@ -116,15 +117,26 @@ h6 {
   column-gap: 1rem;
 }
 
-.logo {
-  width: auto; /* remove percentage */
-}
 
+/* logo and expansion when not destop */
 .logo {
   grid-area: logo;
   width: 30%;
 }
 
+@media (max-width: 1024px) {
+  .logo {
+    width: 70%;
+}
+}
+
+@media (max-width: 600px) {
+  .logo {
+  width: 90%;
+  } 
+}
+
+/* logo text, two rows */
 .text-one {
   display: grid;
   grid-area: one;
@@ -158,6 +170,7 @@ h6 {
 }
 
 /* from horixontal to vertical  */
+
 @media (max-width: 1024px) {
   .he4 {
     flex-direction: column;
@@ -262,10 +275,17 @@ h6 {
   gap: 1rem;
 }
 
+
+.register_text span {
+  font-size: 2.5rem;
+  color: var(--clr-neutral-900);
+  font-weight: var(--fs-700);
+}
+
 /* tablet */
 @media (max-width: 1024px) {
   .register_text {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -274,12 +294,10 @@ h6 {
   .register_text {
     grid-template-columns: 1fr;
   }
-}
 
-.register_text span {
-  font-size: 2rem;
-  color: var(--clr-neutral-900);
-  font-weight: var(--fs-400);
+  .register_text > * {
+    grid-column: auto;
+  }
 }
 
 /* why does not width: auto work? */
@@ -642,9 +660,25 @@ img {
   margin-bottom: 1rem;
 }
 
+/* register icon */
+
 .row3 {
   grid-column:  5/ 6;
   grid-row: 1;
+}
+
+
+/* not working */
+@media (max-width: 1024px) {
+  .row3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .row3 {
+    grid-template-columns: 1fr;
+  }
 }
 
 .input-wrap {
