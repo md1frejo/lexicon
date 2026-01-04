@@ -385,13 +385,20 @@ h6 {
 }
 
 .t3 h3 {
+  display: flex;
+  justify-content: space-around;
   font-size: 1rem;
   padding: 0.5rem;
-  width: 27vh;
+  width: 25vh;
   color: var(--clr-neutral-100);
   background-color: var(--clr-green-400);
   border-radius: 15px;
   margin-bottom: 3rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.t3 h3:hover {
+  background-color: red;
 }
 
 .left {
@@ -734,7 +741,7 @@ img {
 
 .footer {
   display: grid;
-  grid-template-columns: 2fr 1fr 3fr 1fr 2fr;
+  grid-template-columns: 2fr21fr 3fr 1fr 2fr;
   grid-template-areas:  "lfill footer_left footer_middle footer_right rfill";
   width: 100%;
   background-color: var(--clr-green-200);
