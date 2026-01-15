@@ -1,0 +1,14 @@
+npm init -y
+npm install typescript --save-dev
+npx tsc --init  
+
+ändra tsconfig.json 
+
+mkdir src
+
+mkdir dist
+
+src/index.ts
+
+index.html
+npx tsc --watch

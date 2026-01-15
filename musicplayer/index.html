@@ -1,0 +1,106 @@
+<!--  <!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeScript Intro</title>
+    <script type="module" src="./dist/index.js" defer></script>
+    <script type="module" src="./dist/albums.js" defer></script>
+</head>
+<body>
+    <h1>Öppna med live server för att se resultatet!</h1>
+    <p>Högerklicka > Inspektera > Console</p>
+
+    <p>musicplayer</p>
+    
+    <article>
+        <div class="card">
+            <h2 id="song-title">loading ...</h2>
+            <p id="song-artist">loading ...</p>
+            <p id="song-duration">loading ...</p>
+            <p id="song-atitle">loading ...</p>
+            <p id="song-year">loading ...</p>
+        </div>
+    </article>
+
+
+
+
+</html>
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+
+    <script type="module" src="./dist/index.js"></script> 
+
+    <title>Music player</title>
+  </head>
+
+  <body class="body">
+    <header class="top-bar">
+      <input class="input"
+        type="text"
+        id="search-input"
+        placeholder="Sök efter låt"
+        aria-label="Sök efter låt"
+      />
+      <input class="input"
+        type="text"
+        id="search-album"
+        placeholder="Sök efter album"
+        aria-label="Sök efter album"
+      />
+      <input class="input"
+        type="text"
+        id="search-band"
+        placeholder="Sök efter band"
+        aria-label="Sök efter band"
+      />
+
+    </header>
+
+    <main id="song-list-container" class="songs-grid"></main>
+
+    <footer id="player-footer" class="player-card fixed-bottom">
+
+      <div class="info-wrapper">
+        <h2 id="song-title" class="song-title">Välj en låt</h2>
+        <span id="song-artist" class="artist-name">artist name</span>
+    <
+      </div>
+
+      <div class="controls-wrapper">
+        <button
+          id="prev-btn"
+          class="control-btn"
+          aria-label="Spela föregående låt"
+        >
+          <span class="material-symbols-outlined">skip_previous</span>
+        </button>
+
+        <button
+          id="play-btn"
+          class="control-btn play-btn"
+          aria-label="Spela eller pausa"
+        >
+          <span class="material-symbols-outlined">pause</span>
+        </button>
+
+        <button id="next-btn" class="control-btn" aria-label="Spela nästa låt">
+          <span class="material-symbols-outlined">skip_next</span>
+        </button>
+      </div>
+    </footer>
+  </body>
+</html>
+

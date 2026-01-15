@@ -1,0 +1,41 @@
+/* style for music player */
+
+.card {
+    display: flex;
+    flex-direction: row;
+}
+
+.body {
+    background-color: lightblue;
+}
+
+.input {
+    background-color: beige;
+}
+
+.songs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.song-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 0.75rem;
+  background-color: lightcyan;
+  border-radius: 6px;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.not-visible {
+  visibility: hidden;
+}
+
+.hidden {
+  display: none;
+}
