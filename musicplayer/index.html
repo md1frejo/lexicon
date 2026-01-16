@@ -47,7 +47,7 @@
   </head>
 
   <body class="body">
-    <header class="top-bar">
+    <header class="topbar">
       <input class="input"
         type="text"
         id="search-input"
@@ -66,7 +66,10 @@
         placeholder="Sök efter band"
         aria-label="Sök efter band"
       />
-
+    <select id="search-mode">
+        <option value="AND">AND</option>
+        <option value="OR">OR</option>
+    </select>
     </header>
 
     <main id="song-list-container" class="songs-grid"></main>

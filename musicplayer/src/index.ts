@@ -234,5 +234,47 @@ function playSong(song: Song) {
   }
 }
 
-  
-  
+function filterCards(
+  titleQuery: string,
+  albumQuery: string,
+  artistQuery: string,
+  mode: "AND" | "OR"
+) {
+  const cards = document.querySelectorAll(".song-card");
+
+  cards.forEach((card) => {
+    const title = card.querySelector(".song-title")?.textContent?.toLowerCase() ?? "";
+    const album = card.querySelector(".album-title")?.textContent?.toLowerCase() ?? "";
+    const artist = card.querySelector(".artist-name")?.textContent?.toLowerCase() ?? "";
+
+    const titleMatch = titleQuery ? title.includes(titleQuery) : false;
+    const albumMatch = albumQuery ? album.includes(albumQuery) : false;
+    const artistMatch = artistQuery ? artist.includes(artistQuery) : false;
+
+    const matches =
+      mode === "AND"
+        ? (!titleQuery || titleMatch) &&
+          (!albumQuery || albumMatch) &&
+          (!artistQuery || artistMatch)
+        : titleMatch || albumMatch || artistMatch;
+
+    card.classList.toggle("hidden", !matches);
+  });
+}
+
+const searchMode = document.querySelector("#search-mode") as HTMLSelectElement;
+
+function applyFilters() {
+  filterCards(
+    searchInput?.value.toLowerCase() ?? "",
+    searchAlbum?.value.toLowerCase() ?? "",
+    searchBand?.value.toLowerCase() ?? "",
+    (searchMode?.value as "AND" | "OR") ?? "AND"
+  );
+}
+
+searchInput?.addEventListener("input", applyFilters);
+searchAlbum?.addEventListener("input", applyFilters);
+searchBand?.addEventListener("input", applyFilters);
+searchMode?.addEventListener("change", applyFilters);
+
