@@ -9,11 +9,34 @@
     background-color: #f9f9f9;
 }
 
-.topbar {
+.header {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: beige;
+}
+
+/* inpput section */
+.topbar_left {
     display: flex;
     flex-direction: column;
     width: fit-content;
     margin-bottom: 1rem;
+}
+
+.topbar_center {
+    display: flex;
+    flex-direction: column;
+}
+
+.button_top {
+    border-radius: 15px;
+    background-color:cornsilk;
+    width: 6rem;
+    height: auto;
+}
+
+.topbar_right {
+    display: flex;
 }
 
 .input {

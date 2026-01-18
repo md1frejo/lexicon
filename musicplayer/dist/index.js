@@ -178,7 +178,12 @@ if (searchBand) {
         });
     });
 }
-// FUNKTIONER
+// FUNKTIONERu
+const menu = document.getElementById("menu");
+const toggleBtn = document.getElementById("menu-toggle");
+toggleBtn?.addEventListener("click", () => {
+    menu?.classList.toggle("hidden");
+});
 function playSong(song) {
     if (songTitleElement) {
         songTitleElement.textContent = song.title;
@@ -204,13 +209,5 @@ function filterCards(titleQuery, albumQuery, artistQuery, mode) {
         card.classList.toggle("hidden", !matches);
     });
 }
-const searchMode = document.querySelector("#search-mode");
-function applyFilters() {
-    filterCards(searchInput?.value.toLowerCase() ?? "", searchAlbum?.value.toLowerCase() ?? "", searchBand?.value.toLowerCase() ?? "", searchMode?.value ?? "AND");
-}
-searchInput?.addEventListener("input", applyFilters);
-searchAlbum?.addEventListener("input", applyFilters);
-searchBand?.addEventListener("input", applyFilters);
-searchMode?.addEventListener("change", applyFilters);
 export {};
 //# sourceMappingURL=index.js.map
