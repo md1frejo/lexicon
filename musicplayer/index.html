@@ -73,25 +73,28 @@
     </footer>
 
     <dialog id="menu-dialog" class="modal">
-        <form action="#" id="menu-form" method="dialog">
+        <form action="#" id="menu-form">
                 <p>
                     <label for="artist">artist:</label>
-                    <input type="text" id="artist" name="artist" />
+                    <input type="text" id="artist" name="artist" 
+                    placeholder="death" required />
                 </p>
                 <p>
                     <label for="album">album:</label>
-                    <input type="text" id="album" name="album" />
+                    <input type="text" id="album" name="album" 
+                    placeholder="human" required/>
                 </p>
                <p>
                     <label for="song">song:</label>
-                    <input type="text" id="add-song" name="song" />
+                    <input type="text" id="add-song" name="song" 
+                    placeholder="lack of comphrehension"/>
                 </p>
                 <p>
                     <label for="msg">Message:</label>
                     <textarea id="msg" name="user_message"></textarea>
                 </p>
                  <button value="cancel">Cancel</button>
-                <button value="confirm">Save</button>
+                <button type="submit"  value="confirm">Save</button>
             </form>
 </dialog>
 

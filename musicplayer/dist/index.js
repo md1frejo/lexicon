@@ -67,6 +67,10 @@ const songTitleElement = document.getElementById("song-title");
 const songArtistElement = document.getElementById("song-artist");
 const coverImageElement = document.getElementById("cover-img");
 const dialog = document.querySelector("#menu-dialog");
+const addform = document.querySelector("#menu-form");
+const getartist = document.querySelector("#artist");
+const getalbum = document.querySelector("#album");
+const getsong = document.querySelector("#song");
 const searchInput = document.querySelector("#search-input");
 const searchAlbum = document.querySelector("#search-album");
 const searchBand = document.querySelector("#search-band");
@@ -74,41 +78,40 @@ const songListContainer = document.querySelector("#song-list-container");
 const playButton = document.querySelector("#play-btn");
 let status = "paused";
 // LOGIK
-playlist.forEach((song) => {
-    const card = document.createElement("article");
-    card.classList.add("song-card");
-    const title = document.createElement("h3");
-    title.classList.add("song-title");
-    title.textContent = song.title;
-    const album = document.createElement("span");
-    album.classList.add("album-title");
-    album.textContent = song.album.title;
-    const artist = document.createElement("span");
-    artist.classList.add("artist-name");
-    artist.textContent = song.artist;
-    //  const title = document.createElement("h3");
-    //  title.textContent = song.title;
-    //  const artist = document.createElement("span");
-    //  artist.textContent = song.artist;
-    const duration = document.createElement("span");
-    duration.textContent = song.durationInSeconds.toString();
-    const year = document.createElement("span");
-    year.textContent = song.album.year.toString();
-    //const album = document.createElement("span");
-    //album.textContent = song.album.title
-    card.append(title, artist, duration, year, album);
+function renderSongs() {
     if (songListContainer) {
-        card.addEventListener("click", () => {
-            const currentActive = document.querySelector(".song-card.active");
-            if (currentActive) {
-                currentActive.classList.remove("active");
-            }
-            card.classList.add("active");
-            playSong(song);
-        });
-        songListContainer.append(card);
+        songListContainer.replaceChildren();
     }
-});
+    playlist.forEach((song) => {
+        const card = document.createElement("article");
+        card.classList.add("song-card");
+        const title = document.createElement("h3");
+        title.classList.add("song-title");
+        title.textContent = song.title;
+        const album = document.createElement("span");
+        album.classList.add("album-title");
+        album.textContent = song.album.title;
+        const artist = document.createElement("span");
+        artist.classList.add("artist-name");
+        artist.textContent = song.artist;
+        const duration = document.createElement("span");
+        duration.textContent = song.durationInSeconds.toString();
+        const year = document.createElement("span");
+        year.textContent = song.album.year.toString();
+        card.append(title, artist, duration, year, album);
+        if (songListContainer) {
+            card.addEventListener("click", () => {
+                const currentActive = document.querySelector(".song-card.active");
+                if (currentActive) {
+                    currentActive.classList.remove("active");
+                }
+                card.classList.add("active");
+                playSong(song);
+            });
+            songListContainer.append(card);
+        }
+    });
+}
 if (playButton) {
     playButton.addEventListener("click", () => {
         const iconElement = playButton.querySelector("span");
@@ -203,13 +206,27 @@ function filterCards(titleQuery, albumQuery, artistQuery, mode) {
         const titleMatch = titleQuery ? title.includes(titleQuery) : false;
         const albumMatch = albumQuery ? album.includes(albumQuery) : false;
         const artistMatch = artistQuery ? artist.includes(artistQuery) : false;
-        const matches = mode === "AND"
-            ? (!titleQuery || titleMatch) &&
-                (!albumQuery || albumMatch) &&
-                (!artistQuery || artistMatch)
-            : titleMatch || albumMatch || artistMatch;
+        const matches = mode === "AND" ? (!titleQuery || titleMatch) && (!albumQuery || albumMatch) && (!artistQuery || artistMatch) : titleMatch || albumMatch || artistMatch;
         card.classList.toggle("hidden", !matches);
     });
 }
+addform?.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const song = getsong.value;
+    const artist = getartist.value;
+    const album = getalbum.value;
+    const addSong = {
+        id: 45,
+        title: song,
+        artist: artist,
+        durationInSeconds: 300,
+        album: { title: "Singel", year: 2024 },
+    };
+    playlist.push(addSong);
+    renderSongs();
+    addform.reset();
+    dialog.close();
+});
+renderSongs();
 export {};
 //# sourceMappingURL=index.js.map

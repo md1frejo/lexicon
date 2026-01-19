@@ -90,6 +90,10 @@ const coverImageElement = document.getElementById(
 ) as HTMLImageElement;
 
 const dialog = document.querySelector("#menu-dialog") as HTMLDialogElement;  
+const addform = document.querySelector("#menu-form") as HTMLFormElement;
+const getartist = document.querySelector("#artist") as HTMLInputElement;
+const getalbum = document.querySelector("#album") as HTMLInputElement;
+const getsong = document.querySelector("#song") as HTMLInputElement;
 
 const searchInput = document.querySelector("#search-input") as HTMLInputElement;
 const searchAlbum = document.querySelector("#search-album") as HTMLInputElement;
@@ -100,7 +104,13 @@ const playButton = document.querySelector("#play-btn") as HTMLButtonElement;
 let status: PlayerStatus = "paused";
 
 // LOGIK
-playlist.forEach((song) => {
+
+function renderSongs() {
+  if (songListContainer) {
+    songListContainer.replaceChildren();
+  }
+  
+  playlist.forEach((song) => {
 
   const card = document.createElement("article");
   card.classList.add("song-card");
@@ -117,20 +127,11 @@ playlist.forEach((song) => {
   artist.classList.add("artist-name");
   artist.textContent = song.artist;
 
-//  const title = document.createElement("h3");
-//  title.textContent = song.title;
-
-//  const artist = document.createElement("span");
-//  artist.textContent = song.artist;
-
   const duration = document.createElement("span");
   duration.textContent = song.durationInSeconds.toString()
 
   const year = document.createElement("span");
   year.textContent = song.album.year.toString()
-
-  //const album = document.createElement("span");
-  //album.textContent = song.album.title
 
   card.append(title, artist, duration, year, album);
 
@@ -143,9 +144,11 @@ playlist.forEach((song) => {
       card.classList.add("active");
       playSong(song);
     });
+
     songListContainer.append(card);
   }
 });
+}
 
 if (playButton) {
   playButton.addEventListener("click", () => {
@@ -264,14 +267,31 @@ function filterCards(
     const albumMatch = albumQuery ? album.includes(albumQuery) : false;
     const artistMatch = artistQuery ? artist.includes(artistQuery) : false;
 
-    const matches =
-      mode === "AND"
-        ? (!titleQuery || titleMatch) &&
-          (!albumQuery || albumMatch) &&
-          (!artistQuery || artistMatch)
-        : titleMatch || albumMatch || artistMatch;
+    const matches = mode === "AND" ? (!titleQuery || titleMatch) && (!albumQuery || albumMatch) && (!artistQuery || artistMatch): titleMatch || albumMatch || artistMatch;
 
     card.classList.toggle("hidden", !matches);
   });
 }
 
+addform?.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const song = getsong.value;
+  const artist = getartist.value;
+  const album = getalbum.value;
+
+  const addSong: Song = {
+    id: 45,
+    title: song,
+    artist: artist,
+    durationInSeconds: 300,
+    album: { title: "Singel", year: 2024 },
+  }
+
+   playlist.push(addSong);
+      renderSongs();
+    addform.reset();
+    dialog.close();
+})
+
+renderSongs();
