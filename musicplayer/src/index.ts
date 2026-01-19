@@ -81,11 +81,15 @@ const playlist: Song[] = [
 ];
 
 // VARIABLER
+
 const songTitleElement = document.getElementById("song-title");
 const songArtistElement = document.getElementById("song-artist");
+
 const coverImageElement = document.getElementById(
   "cover-img"
 ) as HTMLImageElement;
+
+const dialog = document.querySelector("#menu-dialog") as HTMLDialogElement;  
 
 const searchInput = document.querySelector("#search-input") as HTMLInputElement;
 const searchAlbum = document.querySelector("#search-album") as HTMLInputElement;
@@ -223,13 +227,14 @@ if (searchBand) {
   });
 }
 
-// FUNKTIONERu
+// FUNKTIONER
 
-const menu = document.getElementById("menu");
 const toggleBtn = document.getElementById("menu-toggle");
 
 toggleBtn?.addEventListener("click", () => {
-  menu?.classList.toggle("hidden");
+  if (!dialog.open) {
+    dialog.showModal(); 
+  }
 });
 
 function playSong(song: Song) {

@@ -28,27 +28,7 @@
         </div>
 
         <div class="topbar_center">
-
             <button class="button_top" id="menu-toggle">lägg till låt</button>
-
-            <form action="#" id="menu" method="post">
-                <p>
-                    <label for="artist">artist:</label>
-                    <input type="text" id="artist" name="artist" />
-                </p>
-                <p>
-                    <label for="album">album:</label>
-                    <input type="text" id="album" name="album" />
-                </p>
-               <p>
-                    <label for="song">song:</label>
-                    <input type="text" id="song" name="song" />
-                </p>
-                <p>
-                    <label for="msg">Message:</label>
-                    <textarea id="msg" name="user_message"></textarea>
-                </p>
-            </form>
         </div>
 
         <div class="topnav_right">
@@ -91,6 +71,30 @@
         </button>
       </div>
     </footer>
+
+    <dialog id="menu-dialog" class="modal">
+        <form action="#" id="menu-form" method="dialog">
+                <p>
+                    <label for="artist">artist:</label>
+                    <input type="text" id="artist" name="artist" />
+                </p>
+                <p>
+                    <label for="album">album:</label>
+                    <input type="text" id="album" name="album" />
+                </p>
+               <p>
+                    <label for="song">song:</label>
+                    <input type="text" id="add-song" name="song" />
+                </p>
+                <p>
+                    <label for="msg">Message:</label>
+                    <textarea id="msg" name="user_message"></textarea>
+                </p>
+                 <button value="cancel">Cancel</button>
+                <button value="confirm">Save</button>
+            </form>
+</dialog>
+
   </body>
 </html>
 

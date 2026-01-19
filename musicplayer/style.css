@@ -69,3 +69,9 @@
 .hidden {
   display: none;
 }
+
+.modal {
+  border-radius: 15px;
+  background-color: rgb(145, 137, 156);
+  color: lightskyblue;
+}

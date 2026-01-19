@@ -66,6 +66,7 @@ const playlist = [
 const songTitleElement = document.getElementById("song-title");
 const songArtistElement = document.getElementById("song-artist");
 const coverImageElement = document.getElementById("cover-img");
+const dialog = document.querySelector("#menu-dialog");
 const searchInput = document.querySelector("#search-input");
 const searchAlbum = document.querySelector("#search-album");
 const searchBand = document.querySelector("#search-band");
@@ -178,11 +179,12 @@ if (searchBand) {
         });
     });
 }
-// FUNKTIONERu
-const menu = document.getElementById("menu");
+// FUNKTIONER
 const toggleBtn = document.getElementById("menu-toggle");
 toggleBtn?.addEventListener("click", () => {
-    menu?.classList.toggle("hidden");
+    if (!dialog.open) {
+        dialog.showModal();
+    }
 });
 function playSong(song) {
     if (songTitleElement) {
