@@ -1,3 +1,4 @@
+// array with songs
 const playlist = [
     {
         id: 1,
@@ -71,6 +72,7 @@ const addform = document.querySelector("#menu-form");
 const getartist = document.querySelector("#artist");
 const getalbum = document.querySelector("#album");
 const getsong = document.querySelector("#song");
+// get search field
 const searchInput = document.querySelector("#search-input");
 const searchAlbum = document.querySelector("#search-album");
 const searchBand = document.querySelector("#search-band");
@@ -79,39 +81,57 @@ const playButton = document.querySelector("#play-btn");
 let status = "paused";
 // LOGIK
 function renderSongs() {
+    // if full empty songlistcontainer
     if (songListContainer) {
         songListContainer.replaceChildren();
     }
-    playlist.forEach((song) => {
+    playlist.forEach(({ title, artist, id }) => {
+        // new music card
         const card = document.createElement("article");
         card.classList.add("song-card");
-        const title = document.createElement("h3");
-        title.classList.add("song-title");
-        title.textContent = song.title;
-        const album = document.createElement("span");
-        album.classList.add("album-title");
-        album.textContent = song.album.title;
-        const artist = document.createElement("span");
-        artist.classList.add("artist-name");
-        artist.textContent = song.artist;
-        const duration = document.createElement("span");
-        duration.textContent = song.durationInSeconds.toString();
-        const year = document.createElement("span");
-        year.textContent = song.album.year.toString();
-        card.append(title, artist, duration, year, album);
+        card.dataset.id = id.toString();
+        // create element and set its text content
+        const titleElement = document.createElement("h3");
+        titleElement.textContent = title;
+        const artistElement = document.createElement("span");
+        artistElement.textContent = artist;
+        // album.classList.add("album-title");
+        // album.textContent = song.album.title;
+        // const artist = document.createElement("span");
+        card.append(titleElement, artistElement);
+        //artist.classList.add("artist-name");
+        // artist.textContent = song.artist;
+        //const duration = document.createElement("span");
+        //duration.textContent = song.durationInSeconds.toString()
+        //const year = document.createElement("span");
+        //year.textContent = song.album.year.toString()
+        card.append(titleElement, artistElement);
         if (songListContainer) {
-            card.addEventListener("click", () => {
-                const currentActive = document.querySelector(".song-card.active");
-                if (currentActive) {
-                    currentActive.classList.remove("active");
-                }
-                card.classList.add("active");
-                playSong(song);
-            });
             songListContainer.append(card);
         }
+        //   songListContainer.addEventListener("click", (e) => {
+        //     const target = e.target as HTMLElement;
+        //     const card = target.closest(".song-card") as HTMLElement;
+        //     if(!card) return;
+        //     const idsr = card.dataset.id;
+        //     const currentActive = document.querySelector("song-card.active");
+        //     if(currentActive) currentActive.classList.remove("active")
+        //     playSong(id)
     });
 }
+//  if (songListContainer) {
+//    card.addEventListener("click", () => {
+//      const currentActive = document.querySelector(".song-card.active");
+//      if (currentActive) {
+//        currentActive.classList.remove("active");
+//      }
+//      card.classList.add("active");
+//      playSong(song);
+//    });
+//    songListContainer.append(card);
+//  }
+//});
+//}
 if (playButton) {
     playButton.addEventListener("click", () => {
         const iconElement = playButton.querySelector("span");
@@ -147,6 +167,7 @@ if (searchInput) {
         });
     });
 }
+// search clauses
 if (searchAlbum) {
     searchAlbum.addEventListener("input", (e) => {
         const target = e.target;

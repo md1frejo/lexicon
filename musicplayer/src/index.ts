@@ -15,6 +15,7 @@ interface Album {
 
 type PlayerStatus = "playing" | "paused" | "stopped";
 
+// array with songs
 const playlist: Song[] = [
   {
     id: 1,
@@ -85,9 +86,7 @@ const playlist: Song[] = [
 const songTitleElement = document.getElementById("song-title");
 const songArtistElement = document.getElementById("song-artist");
 
-const coverImageElement = document.getElementById(
-  "cover-img"
-) as HTMLImageElement;
+const coverImageElement = document.getElementById("cover-img") as HTMLImageElement;
 
 const dialog = document.querySelector("#menu-dialog") as HTMLDialogElement;  
 const addform = document.querySelector("#menu-form") as HTMLFormElement;
@@ -95,6 +94,7 @@ const getartist = document.querySelector("#artist") as HTMLInputElement;
 const getalbum = document.querySelector("#album") as HTMLInputElement;
 const getsong = document.querySelector("#song") as HTMLInputElement;
 
+// get search field
 const searchInput = document.querySelector("#search-input") as HTMLInputElement;
 const searchAlbum = document.querySelector("#search-album") as HTMLInputElement;
 const searchBand = document.querySelector("#search-band") as HTMLInputElement;
@@ -106,49 +106,80 @@ let status: PlayerStatus = "paused";
 // LOGIK
 
 function renderSongs() {
+  // if full empty songlistcontainer
   if (songListContainer) {
-    songListContainer.replaceChildren();
+    songListContainer.replaceChildren(); 
   }
   
-  playlist.forEach((song) => {
+  playlist.forEach(({title, artist, id}) => {
 
-  const card = document.createElement("article");
-  card.classList.add("song-card");
+    // new music card
+    const card = document.createElement("article");
+    card.classList.add("song-card");
 
-  const title = document.createElement("h3");
-  title.classList.add("song-title");
-  title.textContent = song.title;
+    card.dataset.id = id.toString();
 
-  const album = document.createElement("span");
-  album.classList.add("album-title");
-  album.textContent = song.album.title;
+    // create element and set its text content
+    const titleElement = document.createElement("h3");
+    titleElement.textContent=title
 
-  const artist = document.createElement("span");
-  artist.classList.add("artist-name");
-  artist.textContent = song.artist;
+    const artistElement = document.createElement("span");
+    artistElement.textContent = artist;
 
-  const duration = document.createElement("span");
-  duration.textContent = song.durationInSeconds.toString()
+   // album.classList.add("album-title");
+   // album.textContent = song.album.title;
 
-  const year = document.createElement("span");
-  year.textContent = song.album.year.toString()
+   // const artist = document.createElement("span");
 
-  card.append(title, artist, duration, year, album);
+    card.append(titleElement, artistElement);
 
-  if (songListContainer) {
-    card.addEventListener("click", () => {
-      const currentActive = document.querySelector(".song-card.active");
-      if (currentActive) {
-        currentActive.classList.remove("active");
-      }
-      card.classList.add("active");
-      playSong(song);
-    });
+    //artist.classList.add("artist-name");
+   // artist.textContent = song.artist;
 
-    songListContainer.append(card);
-  }
-});
+    //const duration = document.createElement("span");
+    //duration.textContent = song.durationInSeconds.toString()
+
+    //const year = document.createElement("span");
+    //year.textContent = song.album.year.toString()
+
+    card.append(titleElement,artistElement);
+
+    if (songListContainer) {
+      songListContainer.append(card)
+    }
+
+ //   songListContainer.addEventListener("click", (e) => {
+ //     const target = e.target as HTMLElement;
+ //     const card = target.closest(".song-card") as HTMLElement;
+
+ //     if(!card) return;
+
+ //     const idsr = card.dataset.id;
+ //     const currentActive = document.querySelector("song-card.active");
+
+ //     if(currentActive) currentActive.classList.remove("active")
+
+ //     playSong(id)
+
+  })
 }
+  
+
+
+//  if (songListContainer) {
+//    card.addEventListener("click", () => {
+//      const currentActive = document.querySelector(".song-card.active");
+//      if (currentActive) {
+//        currentActive.classList.remove("active");
+//      }
+//      card.classList.add("active");
+//      playSong(song);
+//    });
+
+//    songListContainer.append(card);
+//  }
+//});
+//}
 
 if (playButton) {
   playButton.addEventListener("click", () => {
@@ -177,18 +208,22 @@ if (searchInput) {
     const allCard = document.querySelectorAll(".song-card");
 
     allCard.forEach((card) => {
+
     //  const title = card.querySelector("h3")?.textContent?.toLowerCase();
       const title = card.querySelector(".song-title")?.textContent?.toLowerCase();
 
       if (title?.includes(searchTerm)) {
-        console.log(title)
-        card.classList.remove("hidden");
-      } else {
-        card.classList.add("hidden");
+          console.log(title)
+          card.classList.remove("hidden");
+      } 
+      else {
+          card.classList.add("hidden");
       }
     });
   });
 }
+
+// search clauses
 
 if (searchAlbum) {
   searchAlbum.addEventListener("input", (e) => {
@@ -254,8 +289,8 @@ function filterCards(
   titleQuery: string,
   albumQuery: string,
   artistQuery: string,
-  mode: "AND" | "OR"
-) {
+  mode: "AND" | "OR") {
+
   const cards = document.querySelectorAll(".song-card");
 
   cards.forEach((card) => {
