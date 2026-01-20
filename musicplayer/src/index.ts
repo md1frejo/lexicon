@@ -85,7 +85,6 @@ const playlist: Song[] = [
 
 const songTitleElement = document.getElementById("song-title");
 const songArtistElement = document.getElementById("song-artist");
-
 const coverImageElement = document.getElementById("cover-img") as HTMLImageElement;
 
 const dialog = document.querySelector("#menu-dialog") as HTMLDialogElement;  
