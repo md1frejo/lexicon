@@ -81,42 +81,24 @@ const playButton = document.querySelector("#play-btn");
 let status = "paused";
 // LOGIK
 function renderSongs() {
-    // if full empty songlistcontainer
-    if (songListContainer) {
-        songListContainer.replaceChildren();
-    }
-    playlist.forEach(({ title, artist, id }) => {
-        // new music card
+    if (!songListContainer)
+        return;
+    songListContainer.replaceChildren();
+    playlist.forEach(({ title, artist, album, id }) => {
         const card = document.createElement("article");
         card.classList.add("song-card");
         card.dataset.id = id.toString();
-        // create element and set its text content
         const titleElement = document.createElement("h3");
+        titleElement.classList.add("song-title");
         titleElement.textContent = title;
         const artistElement = document.createElement("span");
+        artistElement.classList.add("artist-name");
         artistElement.textContent = artist;
-        // album.classList.add("album-title");
-        // album.textContent = song.album.title;
-        // const artist = document.createElement("span");
-        card.append(titleElement, artistElement);
-        //artist.classList.add("artist-name");
-        // artist.textContent = song.artist;
-        //const duration = document.createElement("span");
-        //duration.textContent = song.durationInSeconds.toString()
-        //const year = document.createElement("span");
-        //year.textContent = song.album.year.toString()
-        card.append(titleElement, artistElement);
-        if (songListContainer) {
-            songListContainer.append(card);
-        }
-        //   songListContainer.addEventListener("click", (e) => {
-        //     const target = e.target as HTMLElement;
-        //     const card = target.closest(".song-card") as HTMLElement;
-        //     if(!card) return;
-        //     const idsr = card.dataset.id;
-        //     const currentActive = document.querySelector("song-card.active");
-        //     if(currentActive) currentActive.classList.remove("active")
-        //     playSong(id)
+        const albumElement = document.createElement("span");
+        albumElement.classList.add("album-title");
+        albumElement.textContent = album.title;
+        card.append(titleElement, artistElement, albumElement);
+        songListContainer.append(card);
     });
 }
 //  if (songListContainer) {
@@ -128,7 +110,7 @@ function renderSongs() {
 //      card.classList.add("active");
 //      playSong(song);
 //    });
-//    songListContainer.append(card);
+//    songListContainer.append(card);song-card
 //  }
 //});
 //}
@@ -150,15 +132,17 @@ if (playButton) {
     });
 }
 if (searchInput) {
+    console.log(searchInput);
     searchInput.addEventListener("input", (e) => {
         const target = e.target;
         const searchTerm = target.value.toLowerCase();
+        console.log(target);
         const allCard = document.querySelectorAll(".song-card");
+        console.log(allCard);
         allCard.forEach((card) => {
             //  const title = card.querySelector("h3")?.textContent?.toLowerCase();
             const title = card.querySelector(".song-title")?.textContent?.toLowerCase();
             if (title?.includes(searchTerm)) {
-                console.log(title);
                 card.classList.remove("hidden");
             }
             else {
