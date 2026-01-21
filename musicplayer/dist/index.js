@@ -33,6 +33,16 @@ const playlist = [
         },
     },
     {
+        id: 4,
+        title: "Lovley day",
+        artist: "fron 242",
+        durationInSeconds: 300,
+        album: {
+            title: "no comment",
+            year: 1985,
+        },
+    },
+    {
         id: 5,
         title: "Africa",
         artist: "Toto",
@@ -43,17 +53,7 @@ const playlist = [
         },
     },
     {
-        id: 4,
-        title: "Africa",
-        artist: "Toto",
-        durationInSeconds: 300,
-        album: {
-            title: "Toto IV",
-            year: 1982,
-        },
-    },
-    {
-        id: 4,
+        id: 7,
         title: "Never Give You Up",
         artist: "Rick Astley",
         durationInSeconds: 200,
@@ -65,13 +65,13 @@ const playlist = [
 ];
 // json reading 
 const readjson = async () => {
-    const res = await fetch("./testj.json");
+    const res = await fetch("./mlib.json");
     const data = await res.json();
-    console.log(data);
-    console.log("pl1: ", playlist);
+    console.log("data: ", data);
     playlist.length = 0;
     playlist.push(...data);
-    console.log(playlist);
+    console.log("pl2: ", playlist);
+    renderSongs();
 };
 // VARIABLER
 const songTitleElement = document.getElementById("song-title");
@@ -79,9 +79,9 @@ const songArtistElement = document.getElementById("song-artist");
 const coverImageElement = document.getElementById("cover-img");
 const dialog = document.querySelector("#menu-dialog");
 const addform = document.querySelector("#menu-form");
-const getartist = document.querySelector("#artist");
-const getalbum = document.querySelector("#album");
-const getsong = document.querySelector("#song");
+const getartist = document.querySelector("#add-artist");
+const getalbum = document.querySelector("#add-album");
+const getsong = document.querySelector("#add-song");
 // get search field
 const searchInput = document.querySelector("#search-input");
 const searchAlbum = document.querySelector("#search-album");
@@ -111,19 +111,6 @@ function renderSongs() {
         songListContainer.append(card);
     });
 }
-//  if (songListContainer) {
-//    card.addEventListener("click", () => {
-//      const currentActive = document.querySelector(".song-card.active");
-//      if (currentActive) {
-//        currentActive.classList.remove("active");
-//      }
-//      card.classList.add("active");
-//      playSong(song);
-//    });
-//    songListContainer.append(card);song-card
-//  }
-//});
-//}
 if (playButton) {
     playButton.addEventListener("click", () => {
         const iconElement = playButton.querySelector("span");
@@ -227,21 +214,15 @@ function filterCards(titleQuery, albumQuery, artistQuery, mode) {
 }
 addform?.addEventListener("submit", (e) => {
     e.preventDefault();
-    const getsong = document.querySelector("#add-song");
-    const song = getsong.value;
-    const getartist = document.querySelector("#add-artist");
-    const artist = getartist.value;
-    const getalbum = document.querySelector("#add-album");
-    const album = getalbum.value;
-    console.log(song);
-    console.log(artist);
-    console.log(album);
     const addSong = {
-        id: 45,
-        title: song,
-        artist: artist,
+        id: Date.now(),
+        title: getsong.value,
+        artist: getartist.value,
         durationInSeconds: 300,
-        album: { title: album, year: 1994 },
+        album: {
+            title: getalbum.value,
+            year: new Date().getFullYear(),
+        },
     };
     playlist.push(addSong);
     renderSongs();
@@ -250,7 +231,7 @@ addform?.addEventListener("submit", (e) => {
 });
 document.addEventListener("DOMContentLoaded", () => {
     readjson();
+    renderSongs();
 });
-renderSongs();
 export {};
 //# sourceMappingURL=index.js.map
