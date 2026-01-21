@@ -63,6 +63,16 @@ const playlist = [
         },
     },
 ];
+// json reading 
+const readjson = async () => {
+    const res = await fetch("./testj.json");
+    const data = await res.json();
+    console.log(data);
+    console.log("pl1: ", playlist);
+    playlist.length = 0;
+    playlist.push(...data);
+    console.log(playlist);
+};
 // VARIABLER
 const songTitleElement = document.getElementById("song-title");
 const songArtistElement = document.getElementById("song-artist");
@@ -217,20 +227,29 @@ function filterCards(titleQuery, albumQuery, artistQuery, mode) {
 }
 addform?.addEventListener("submit", (e) => {
     e.preventDefault();
+    const getsong = document.querySelector("#add-song");
     const song = getsong.value;
+    const getartist = document.querySelector("#add-artist");
     const artist = getartist.value;
+    const getalbum = document.querySelector("#add-album");
     const album = getalbum.value;
+    console.log(song);
+    console.log(artist);
+    console.log(album);
     const addSong = {
         id: 45,
         title: song,
         artist: artist,
         durationInSeconds: 300,
-        album: { title: "Singel", year: 2024 },
+        album: { title: album, year: 1994 },
     };
     playlist.push(addSong);
     renderSongs();
     addform.reset();
     dialog.close();
+});
+document.addEventListener("DOMContentLoaded", () => {
+    readjson();
 });
 renderSongs();
 export {};
