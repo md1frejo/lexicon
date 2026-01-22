@@ -1,17 +1,4 @@
-// Interfaces/Typer
-interface Song {
-  id: number;
-  title: string;
-  artist: string;
-  durationInSeconds: number;
-  album: Album;
-}
-
-interface Album {
-  title: string;
-  year: number;
-  coverUrl?: string;
-}
+import type { Song } from "./models/interf";
 
 type PlayerStatus = "playing" | "paused" | "stopped";
 
