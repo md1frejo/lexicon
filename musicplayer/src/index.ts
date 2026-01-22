@@ -84,7 +84,7 @@ const playlist: Song[] = [
 // json reading 
 
 const readjson = async () => {
-  const res = await fetch("./mlib.json");
+  const res = await fetch("./mlibred.json");
   const data = await res.json() as Song[];
   console.log("data: ",data)
   playlist.length = 0;
@@ -126,7 +126,7 @@ function renderSongs() {
     card.classList.add("song-card");
     card.dataset.id = id.toString();
 
-    const titleElement = document.createElement("h3");
+    const titleElement = document.createElement("h4");
     titleElement.classList.add("song-title");
     titleElement.textContent = title;
 

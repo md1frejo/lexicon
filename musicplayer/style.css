@@ -12,7 +12,7 @@
 .header {
     display: grid;
     grid-template-columns: auto auto auto;
-    background-color: beige;
+    background-color: rgb(223, 246, 255);
 }
 
 /* inpput section */
@@ -50,6 +50,8 @@
 }
 
 .song-card {
+  height: 7rem;
+  width: auto;
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
