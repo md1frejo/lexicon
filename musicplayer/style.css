@@ -43,15 +43,39 @@
     background-color: #ffffff;
 }
 
+.layout {
+  display: grid;
+  grid-template-columns: 14rem 1fr; 
+  gap: 1rem;                      
+  padding: 1rem;
+}
+
+.left-sidebar {
+  background: #ace8fc;
+  color: white;
+  padding: 1rem;
+}
+
+.sidebar-p {
+  size: 2rem;
+  color: black;
+}
+
+.sidebar-h3 {
+  size: 1rem;
+  color: black;
+}
+
 .songs-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(10, 1fr);
   gap: 1rem;
+  width: 100%;
 }
 
 .song-card {
-  height: 7rem;
-  width: auto;
+  height: 10rem;
+  width: 6rem;
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
