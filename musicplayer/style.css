@@ -56,9 +56,33 @@
   padding: 1rem;
 }
 
-.sidebar-p {
+
+.song-title {
+  color: brown;
   size: 2rem;
-  color: black;
+}
+
+.artist-name {
+  color: rgb(79, 116, 239);
+}
+
+.album-title {
+  color: rgb(2, 154, 88);
+}
+
+.sidebar-h-1 {
+  size: 2rem;
+  color: brown;
+}
+
+.sidebar-h-2 {
+  size: 2rem;
+  color: rgb(79, 116, 239);
+}
+
+.sidebar-h-3 {
+  size: 2rem;
+  color: rgb(2, 154, 88);
 }
 
 .sidebar-h3 {
@@ -74,13 +98,13 @@
 }
 
 .song-card {
-  height: 10rem;
+  height: 8rem;
   width: 6rem;
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
   padding: 0.75rem;
-  background-color: #cde7f9;
+  background-color: #e1f3ff;
   border-radius: 5px;
 }
 
