@@ -1,0 +1,9 @@
+{
+  "title": "Italian nouns",
+  "nouns": [
+    { "masculino":"il", "il":"gatto"  },
+    { "masculino": "i", "i": "gatti" },
+    { "feminino": "la", "la": "casa" },
+    { "feminino": "la", "le": "case" }
+  ]
+}

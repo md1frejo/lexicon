@@ -1,0 +1,11 @@
+{
+  "title": "personal pronouns",
+  "pronouns": [
+    { "person": "io", "meaning": "I" },
+    { "person": "tu", "meaning": "you (singular)" },
+    { "person": "lui/lei", "meaning": "he/she" },
+    { "person": "noi", "meaning": "we" },
+    { "person": "voi", "meaning": "you (plural)" },
+    { "person": "loro", "meaning": "they" }
+  ]
+}

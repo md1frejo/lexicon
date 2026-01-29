@@ -1,0 +1,11 @@
+{
+  "title": "possesive pronomens",
+  "possesive": [
+    { "masc sing":"il mio","masc pl":"i miei","fem sing":"la mia","fem pl":"le mie"},
+    { "masc sing":"il tuo","masc pl":"i tuoi","fem sing":"la tua","fem pl":"le tue"},
+    { "masc sing":"il suo","masc pl":"i suoi","fem sing":"la sua","fem pl":"le sue"},
+    { "masc sing":"il nostro","masc pl":"i nostri","fem sing":"la nostra","fem pl":"le nostre"},
+    { "masc sing":"il vostro","masc pl":"i vostri","fem sing":"la vostra","fem pl":"le vostre"},
+    { "masc sing":"il loro","masc pl":"i loro","fem sing":"la loro","fem pl":"le loro"}
+  ]
+}
