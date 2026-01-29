@@ -22,23 +22,30 @@ export default function posspronTable() {
             {posspronData.title}
           </h3>
 
-          <table className="w-full border-collapse">
+
+<div className="w-full overflow-x-auto">
+  <table className="min-w-[700px] border-collapse">
+
+          
             <thead>
               <tr className="text-left border-b">
-                <th className="py-2">Pronoun</th>
-                <th className="py-2">Meaning</th>
+                <th className="py-2">masc</th>
+                <th className="py-2">fem</th>
               </tr>
             </thead>
 
             <tbody>
               {posspronData.possesive.map((p) => (
                 <tr key={p["masc sing"]} className="border-b last:border-b-0">
+                  <td className="py-2 font-medium">{p["masc sing"]}</td>
                   <td className="py-2 font-medium">{p["masc pl"]}</td>
                   <td className="py-2">{p["fem sing"]}</td>
+                  <td className="py-2">{p["fem pl"]}</td>
                 </tr>
               ))}
             </tbody>
           </table>
+          </div>
         </div>
       )}
     </section>

@@ -1,18 +1,21 @@
 "use client";
 
+// runs in browser
+
 import { useState } from "react";
 import pronounsData from "../data/pronouns.json";
 
 export default function PronounsTable() {
   const [open, setOpen] = useState(false);
+  // open starts at false
 
   return (
     
     <section className="max-w-4xl mx-auto px-6 mb-8">
       <button
-        onClick={() => setOpen((x) => !x)}
+        onClick={() => setOpen((x) => !x)} // sets it to opposite, opening
         className="px-4 py-2 rounded-xl border shadow-sm bg-white hover:bg-gray-50">
-        {open ? "Hide pronouns ▲" : "Show pronouns ▼"}
+        {open ? "Hide pronouns ▲" : "Show pronouns ▼"} 
       </button>
 
       {open && (
@@ -28,7 +31,6 @@ export default function PronounsTable() {
                 <th className="py-2">Meaning</th>
               </tr>
             </thead>
-            // maps over json file
             <tbody>
               {pronounsData.pronouns.map((p) => (
                 <tr key={p.person} className="border-b last:border-b-0">

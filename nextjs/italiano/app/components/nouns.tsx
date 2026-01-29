@@ -25,15 +25,20 @@ export default function NounsTable() {
             <thead>
               <tr className="text-left border-b">
                 <th className="py-2">noun</th>
-                <th className="py-2">Meaning</th>
+                <th></th>
+                <th className="py-2">sing/pl</th>
               </tr>
             </thead>
 
             <tbody>
               {nounsData.nouns.map((p) => (
                 <tr key={p.masculino} className="border-b last:border-b-0">
+                  <td className="py-2 font-medium">{p.masculino}</td>
+                  <td className="py-2 font-medium">{p.il}</td>
+                  <td className="py-2 font-medium">{p.i}</td>
                   <td className="py-2 font-medium">{p.feminino}</td>
-                  <td className="py-2">{p.feminino}</td>
+                  <td className="py-2 font-medium">{p.la}</td>
+                  <td className="py-2 font-medium">{p.le}</td>
                 </tr>
               ))}
             </tbody>
