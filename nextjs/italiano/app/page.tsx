@@ -42,11 +42,13 @@ function Highlight({text,query,}: {
 
 export default function Home() {
 
-  // useState = 
-
+  // useState = saves a state 
+  // query gets the search term and state updates
   const [query, setQuery] = useState("");
   console.log(query)
 
+  // usememo converts to lowercase and filters the verblist
+  // forms is all the conjugations
   const filtered = useMemo(() => {
   const q = query.trim().toLowerCase();
     if (!q) return verbs;
@@ -92,7 +94,7 @@ z
         <h2 className="text-2xl font-bold mb-6">Italian verbs</h2>
 
         <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-5">
-          {verbs.map((v) => ( <div key={v.verb} className="rounded-2xl shadow-md border p-5 bg-white">
+          {filtered.map((v) => ( <div key={v.verb} className="rounded-2xl shadow-md border p-5 bg-white">
               <h3 className="text-xl font-semibold mb-4">{v.verb}</h3>
               <table className="w-full border-collapse">
                 <thead>
