@@ -8,11 +8,49 @@ import NounsTable from "./components/nouns";
 import grammarData from "./data/gammar.json" 
 import { useMemo, useState } from "react";
 import Link from "next/link";
+import { NextResponse } from "next/server";
+import { error } from "console";
+import * as cheerio from "cheerio";
+
 
 const verbs = grammarData.grammar
 const order = ["io", "tu", "lui/lei", "noi", "voi", "loro"] as const;
 
 // verbs contain all verbs from grammar.json
+
+type Person = "io" | "tu" | "lui/lei" | "noi" | "voi" | "loro";
+
+export type VerbConjugationJSON = {
+  verb: string;
+  sourceUrl: string;
+  conjugation: Record<string, Record<string, Partial<Record<Person, string>>>>;
+};
+
+export async function scrapeverbs1(verb: string): Promise<VerbConjugationJSON> {
+
+  const baseurl="https://www.italian-verbs.com/los-verbos-italianos/conjugacion.php"
+  const url= new URL(baseurl);
+  url.searchParams.set("parola",verb);
+
+  const res = await fetch(url.toString(), {
+    headers: {
+      "User-Agent": 
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36"
+    },
+    cache: "no-store",
+  })
+
+  const html = await res.text();
+
+  return {
+    verb,
+    sourceUrl: url.toString(),
+    conjugation: {}, // fill this later with cheerio parsing
+  };
+}
+
+const res = await fetch(`/api/scrapeverbs?verb=andare`);
+//console.log(scrapeverbs1("andare"))
 
 function Highlight({text,query,}: {
 
@@ -40,6 +78,20 @@ function Highlight({text,query,}: {
   );
 }
 
+export function Scrapev() {
+  async function handleScrape() {
+    const res = await fetch(`/api/scrapeverbs?verb=andare`);
+    const data = await res.json();
+    console.log(data);
+  }
+
+  return (
+    <div>
+      <button onClick={handleScrape}>Scrape andare</button>
+    </div>
+  );
+}
+
 export default function Home() {
 
   // useState = saves a state 
@@ -62,11 +114,15 @@ export default function Home() {
     });
   }, [query]);1
 
+    // scrapeverbs1("andare");
+
   return (
 
     <main className="main min-h-screen">
       <header>
         <Navigation />
+        <Scrapev />
+
       </header>
       
       <section className="flex justify-center mb-6">
@@ -124,4 +180,7 @@ z
   );
 }
 
-
+// rest api går via url
+// represential state transfer
+// graaphql, specar vad som ska hämtas
+// kolla fetch i network tabben
