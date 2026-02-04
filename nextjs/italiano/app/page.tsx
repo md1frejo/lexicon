@@ -108,7 +108,6 @@ export default function Home() {
     }
   }
 
-  // helper: safely read conjugation
   const indicativoPresente = conj?.conjugation?.indicativo?.presente ?? null;
 
     // scrapeverbs1("andare");
@@ -121,7 +120,7 @@ export default function Home() {
 
       </header>
       
-{/* ===== VERB LIST LEFT OF IMAGE (PASTE START) ===== */}
+
 <section className="mb-6">
   <div className="grid grid-cols-1 md:grid-cols-[260px_1fr] gap-6 items-start">
     {/* LEFT: verb list */}
@@ -160,7 +159,6 @@ export default function Home() {
       </div>
     </aside>
 
-    {/* RIGHT: image */}
     <figure className="flex justify-center">
       <Image
         src="https://www.adriabandiere.com/wp-content/uploads/2021/05/michele-bitetto-jf5SQVEKSFw-unsplash-1482x635.jpg"
@@ -173,7 +171,6 @@ export default function Home() {
     </figure>
   </div>
 </section>
-{/* ===== VERB LIST LEFT OF IMAGE (PASTE END) ===== */}
 
       <div className="flex justify-center">
         <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search verbs (es: essere, ho, siamo...)"
@@ -198,9 +195,7 @@ z
           {filtered.map((v) => (
             <div
               key={v.verb}
-              className="rounded-2xl shadow-md border p-5 bg-white"
-            >
-              {/* CLICK VERB */}
+              className="rounded-2xl shadow-md border p-5 bg-white">
               <h3
                 className="text-xl font-semibold mb-4 cursor-pointer underline underline-offset-4"
                 onClick={() => handleVerbClick(v.verb)} title="Click to scrape conjugation">
@@ -230,7 +225,6 @@ z
           ))}
         </div>
 
-        {/* CONJUGATION PANEL */}
         <div className="mt-10">
           {loading && (
             <p className="text-lg font-medium">
